@@ -132,6 +132,7 @@
             "Protobuf",
             "QuakeML",
             "Shapefile",
+            "Text",
             "TopoJSON",
             "XML",
             "Zarr"

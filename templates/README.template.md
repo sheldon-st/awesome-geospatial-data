@@ -1,8 +1,10 @@
-# Awesome Geospatial Data 
+# Awesome Geospatial Data [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 
 > Publicly accessible geospatial datasets, APIs and live feeds, each tagged with coverage, access method, format and license.
 
 Every entry is free to use, though some need a free key. Each one can be fetched by a program through a download, an API, a web service or a stream, not only viewed in a map. Maintainers check entries by hand and record when they were last verified. See the [inclusion criteria](contributing.md#inclusion-criteria).
+
+Many of these sources also power [OpenGeo](https://opengeo.space), an open,  web-based geospatial client and data aggregator for exploring live and reference geospatial data. We encourage you to check it out. This list is maintained independently of the data publishers. Being listed is not an endorsement, and each source's own terms apply.
 
 Each entry ends with tags in this order:
 

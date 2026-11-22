@@ -4,7 +4,7 @@
 
 Every entry is free to use, though some need a free key. Each one can be fetched by a program through a download, an API, a web service or a stream, not only viewed in a map. Maintainers check entries by hand and record when they were last verified. See the [inclusion criteria](contributing.md#inclusion-criteria).
 
-Many of these sources also power [OpenGeo](https://opengeo.space), a web-based map for exploring live and reference geospatial data. Try it if you'd like to see them side by side. This list is maintained independently of the data publishers. Being listed is not an endorsement, and each source's own terms apply.
+Many of these sources also power [OpenGeo](https://opengeo.space), an open,  web-based geospatial client and data aggregator for exploring live and reference geospatial data. We encourage you to check it out. This list is maintained independently of the data publishers. Being listed is not an endorsement, and each source's own terms apply.
 
 Each entry ends with tags in this order:
 
@@ -16,10 +16,13 @@ Each entry ends with tags in this order:
 
 ## Contents
 
+- [Catalogs and Aggregators](#catalogs-and-aggregators)
 - [Base Maps and Reference](#base-maps-and-reference)
 - [Boundaries and Administrative Units](#boundaries-and-administrative-units)
+- [Population and Society](#population-and-society)
 - [Imagery and Earth Observation](#imagery-and-earth-observation)
 - [Elevation and Bathymetry](#elevation-and-bathymetry)
+- [Land Cover and Biodiversity](#land-cover-and-biodiversity)
 - [Air Quality and Environment](#air-quality-and-environment)
 - [Weather and Climate](#weather-and-climate)
 - [Natural Hazards](#natural-hazards)
@@ -27,11 +30,19 @@ Each entry ends with tags in this order:
 - [Transport and Mobility](#transport-and-mobility)
 - [Aviation, Maritime and Space](#aviation-maritime-and-space)
 
+## Catalogs and Aggregators
+
+Portals, STAC catalogs and open-data registries that index many datasets. Start here when a theme below has no entry for your area.
+
+- [Humanitarian Data Exchange (HDX)](https://data.humdata.org/) - Open catalog of humanitarian datasets, strong on boundaries, population, health and crisis data for low- and middle-income countries. (`Global` `API` `Download` `CSV` `GeoJSON` `Shapefile` `Varies by dataset`)
+
 ## Base Maps and Reference
 
 General-purpose map layers such as roads, places, land, water and cultural features.
 
 - [Natural Earth](https://www.naturalearthdata.com/) - Global cultural, physical and raster base map layers at 1:10m, 1:50m and 1:110m scales. (`Global` `Download` `Shapefile` `GeoPackage` `Public domain`)
+- [OpenStreetMap](https://planet.openstreetmap.org/) - Weekly snapshots and minutely change files of the community-built world map, with regional extracts on mirrors such as Geofabrik. (`Global` `⚡` `Download` `Bulk cloud` `OSM PBF` `XML` `ODbL`)
+- [Overture Maps](https://docs.overturemaps.org/) - Monthly open map releases of places, buildings, transportation, addresses, divisions and base layers as cloud-hosted GeoParquet. (`Global` `Bulk cloud` `GeoParquet` `ODbL / CDLA Permissive 2.0 (by theme)`)
 
 ## Boundaries and Administrative Units
 
@@ -40,6 +51,12 @@ Country, subnational, statistical and maritime boundaries.
 - [geoBoundaries](https://www.geoboundaries.org/) - Open administrative boundaries for every country, from national borders down to local units where available. (`Global` `API` `Download` `GeoJSON` `Shapefile` `TopoJSON` `Varies by boundary`)
 - [Marine Regions](https://www.marineregions.org/) - Reference maritime boundaries, including exclusive economic zones, territorial seas, and named oceans and seas. (`Global` `WMS` `WFS` `Download` `API` `Shapefile` `GeoPackage` `CC BY 4.0`)
 - [U.S. Census TIGERweb](https://tigerweb.geo.census.gov/tigerwebmain/TIGERweb_main.html) - Current and vintage U.S. census geography, from states and counties down to tracts and blocks, as map and feature services. (`USA` `WMS` `ArcGIS REST` `GeoJSON` `JSON` `PNG` `Public domain`)
+
+## Population and Society
+
+Population grids, census geography and socioeconomic statistics with geographic keys.
+
+- [Global Human Settlement Layer (GHSL)](https://human-settlement.emergency.copernicus.eu/datasets.php) - Global grids of population, built-up surface, building height and settlement type from 1975 to 2030. (`Global` `Download` `GeoTIFF` `EU reuse with acknowledgment`)
 
 ## Imagery and Earth Observation
 
@@ -54,8 +71,16 @@ Satellite, aerial and weather-satellite imagery, plus the catalogs that serve th
 
 Terrain models, hillshades, lidar and seafloor depth.
 
+- [Copernicus DEM](https://registry.opendata.aws/copernicus-dem/) - Global digital surface model at 30 m (GLO-30) and 90 m (GLO-90) resolution, derived from TanDEM-X radar data. (`Global` `Bulk cloud` `Download` `COG` `Copernicus DEM licence`)
 - [GEBCO Gridded Bathymetry](https://www.gebco.net/data-products/gridded-bathymetry-data) - Global terrain model of ocean depth and land elevation on a 15 arc-second grid, released annually. (`Global` `Download` `WMS` `NetCDF` `GeoTIFF` `Public domain`)
 - [USGS 3D Elevation Program (3DEP)](https://www.usgs.gov/3d-elevation-program) - Lidar point clouds and bare-earth elevation models for the United States, from 1 meter to 1 arc-second resolution. (`USA` `Download` `WMS` `ArcGIS REST` `Bulk cloud` `GeoTIFF` `LAZ` `Public domain`)
+
+## Land Cover and Biodiversity
+
+Land cover, vegetation, forests and species occurrence.
+
+- [ESA WorldCover](https://esa-worldcover.org/) - Global land cover maps at 10 m resolution for 2020 and 2021, with 11 classes derived from Sentinel-1 and Sentinel-2. (`Global` `Download` `Bulk cloud` `COG` `CC BY 4.0`)
+- [GBIF](https://techdocs.gbif.org/en/openapi/) - Billions of species occurrence records from museums, surveys and citizen science, searchable by taxon, place and time. (`Global` `API` `Download` `Bulk cloud` `CSV` `JSON` `Parquet` `CC0 / CC BY / CC BY-NC (per dataset)` `⚠️`)
 
 ## Air Quality and Environment
 

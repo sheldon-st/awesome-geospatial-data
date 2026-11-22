@@ -610,3 +610,152 @@
   update_frequency: seconds
   added: 2026-11-22
   last_verified: 2026-11-22
+
+# --- Batch 2: global gap fill (2026-11-22) -----------------------------------
+
+- id: openstreetmap
+  name: OpenStreetMap
+  url: https://planet.openstreetmap.org/
+  description: Weekly snapshots and minutely change files of the community-built world map, with regional extracts on mirrors such as Geofabrik.
+  section: base-maps
+  publisher: OpenStreetMap Foundation and contributors
+  publisher_type: community
+  coverage: [Global]
+  access: public
+  license:
+    name: ODbL
+    url: https://www.openstreetmap.org/copyright
+    status: open
+  interfaces: [Download, Bulk cloud]
+  formats: [OSM PBF, XML]
+  realtime: true
+  update_frequency: weekly snapshots, minutely diffs
+  added: 2026-11-22
+  last_verified: 2026-11-22
+  notes: Regional extracts in PBF and shapefile are at https://download.geofabrik.de/. Cloud copies are on the AWS Open Data registry.
+
+- id: overture-maps
+  name: Overture Maps
+  url: https://docs.overturemaps.org/
+  description: Monthly open map releases of places, buildings, transportation, addresses, divisions and base layers as cloud-hosted GeoParquet.
+  section: base-maps
+  publisher: Overture Maps Foundation
+  publisher_type: nonprofit
+  coverage: [Global]
+  access: public
+  license:
+    name: ODbL / CDLA Permissive 2.0 (by theme)
+    url: https://docs.overturemaps.org/attribution/
+    status: open
+  interfaces: [Bulk cloud]
+  formats: [GeoParquet]
+  realtime: false
+  update_frequency: monthly
+  added: 2026-11-22
+  last_verified: 2026-11-22
+  notes: Each theme has its own license and attribution requirements, listed on the attribution page.
+
+- id: copernicus-dem
+  name: Copernicus DEM
+  url: https://registry.opendata.aws/copernicus-dem/
+  description: Global digital surface model at 30 m (GLO-30) and 90 m (GLO-90) resolution, derived from TanDEM-X radar data.
+  section: elevation
+  publisher: European Space Agency and Copernicus Programme
+  publisher_type: intergovernmental
+  coverage: [Global]
+  access: public
+  license:
+    name: Copernicus DEM licence
+    url: https://dataspace.copernicus.eu/explore-data/data-collections/copernicus-contributing-missions/collections-description/COP-DEM
+    status: open
+  interfaces: [Bulk cloud, Download]
+  formats: [COG]
+  realtime: false
+  update_frequency: static (2021 release)
+  added: 2026-11-22
+  last_verified: 2026-11-22
+  notes: A small number of GLO-30 tiles are withheld from the public release. Heights are a surface model (includes buildings and trees), not bare earth.
+
+- id: esa-worldcover
+  name: ESA WorldCover
+  url: https://esa-worldcover.org/
+  description: Global land cover maps at 10 m resolution for 2020 and 2021, with 11 classes derived from Sentinel-1 and Sentinel-2.
+  section: land-cover-biodiversity
+  publisher: European Space Agency and VITO
+  publisher_type: intergovernmental
+  coverage: [Global]
+  access: public
+  license:
+    name: CC BY 4.0
+    url: https://esa-worldcover.org/en/data-access
+    status: open
+  interfaces: [Download, Bulk cloud]
+  formats: [COG]
+  realtime: false
+  update_frequency: per edition
+  added: 2026-11-22
+  last_verified: 2026-11-22
+  notes: The 2020 and 2021 maps use different algorithm versions, so differences between them are not all real change.
+
+- id: gbif
+  name: GBIF
+  url: https://techdocs.gbif.org/en/openapi/
+  description: Billions of species occurrence records from museums, surveys and citizen science, searchable by taxon, place and time.
+  section: land-cover-biodiversity
+  publisher: Global Biodiversity Information Facility
+  publisher_type: intergovernmental
+  coverage: [Global]
+  access: public
+  license:
+    name: CC0 / CC BY / CC BY-NC (per dataset)
+    url: https://www.gbif.org/terms
+    status: restricted
+  interfaces: [API, Download, Bulk cloud]
+  formats: [CSV, JSON, Parquet]
+  realtime: false
+  update_frequency: continuous, monthly cloud snapshots
+  added: 2026-11-22
+  last_verified: 2026-11-22
+  notes: Search is anonymous; occurrence downloads need a free account and carry a citable DOI. Cloud snapshots are released as CC BY-NC overall. Filter by dataset license for commercial use.
+
+- id: ghsl
+  name: Global Human Settlement Layer (GHSL)
+  url: https://human-settlement.emergency.copernicus.eu/datasets.php
+  description: Global grids of population, built-up surface, building height and settlement type from 1975 to 2030.
+  section: population
+  publisher: European Commission Joint Research Centre
+  publisher_type: intergovernmental
+  coverage: [Global]
+  access: public
+  license:
+    name: EU reuse with acknowledgment
+    url: https://human-settlement.emergency.copernicus.eu/datasets.php
+    status: open
+  interfaces: [Download]
+  formats: [GeoTIFF]
+  realtime: false
+  update_frequency: periodic releases
+  added: 2026-11-22
+  last_verified: 2026-11-22
+  notes: Epochs after the latest census year are model projections. Cite the specific release, for example R2023A.
+
+- id: hdx
+  name: Humanitarian Data Exchange (HDX)
+  url: https://data.humdata.org/
+  description: Open catalog of humanitarian datasets, strong on boundaries, population, health and crisis data for low- and middle-income countries.
+  section: catalogs
+  publisher: UN OCHA Centre for Humanitarian Data
+  publisher_type: intergovernmental
+  coverage: [Global]
+  access: public
+  license:
+    name: Varies by dataset
+    url: https://data.humdata.org/faqs/licenses
+    status: open
+  interfaces: [API, Download]
+  formats: [CSV, GeoJSON, Shapefile]
+  realtime: false
+  update_frequency: varies by dataset
+  added: 2026-11-22
+  last_verified: 2026-11-22
+  notes: Most datasets use CC BY, CC BY-IGO, CC BY-SA, ODbL or CC0. Check datasets marked "Other" or "Multiple Licenses". The CKAN API is at /api/3/.

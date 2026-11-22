@@ -19,3 +19,9 @@ Additions, removals and structural changes, grouped by batch. Dates are UTC.
   - Transport: Mobility Database, Digitraffic.
   - Maritime: AISStream.
 - `Text` format value, for NDBC's plain-text observation files.
+- Second batch: 7 global sources that fill empty or thin sections. Every link and license was re-checked on 2026-11-22.
+  - Base maps: OpenStreetMap, Overture Maps.
+  - Elevation: Copernicus DEM.
+  - Land cover and biodiversity: ESA WorldCover, GBIF.
+  - Population: Global Human Settlement Layer (GHSL).
+  - Catalogs: Humanitarian Data Exchange (HDX).

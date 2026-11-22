@@ -103,7 +103,6 @@ Public transit, shared mobility, roads and traffic.
 Aircraft and vessel tracking, launches, satellites and ground stations.
 
 - [AISStream](https://aisstream.io/) - Free WebSocket stream of global AIS vessel positions and static ship data, filterable by bounding box. (`Global` `⚡` `🔑` `Stream` `JSON` `No reuse license stated` `⚠️`)
-- [OpenSky Network](https://opensky-network.org/data/api) - Live and historical ADS-B aircraft state vectors from a global network of community receivers. (`Global` `⚡` `API` `JSON` `OpenSky terms of use` `⚠️`)
 
 ## Related Lists
 

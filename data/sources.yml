@@ -591,27 +591,6 @@
 
 # --- Aviation, maritime and space -------------------------------------------
 
-- id: opensky-network
-  name: OpenSky Network
-  url: https://opensky-network.org/data/api
-  description: Live and historical ADS-B aircraft state vectors from a global network of community receivers.
-  section: aviation-maritime-space
-  publisher: OpenSky Network
-  publisher_type: nonprofit
-  coverage: [Global]
-  access: public
-  license:
-    name: OpenSky terms of use
-    url: https://opensky-network.org/about/terms-of-use
-    status: restricted
-  interfaces: [API]
-  formats: [JSON]
-  realtime: true
-  update_frequency: seconds
-  added: 2026-11-22
-  last_verified: 2026-11-22
-  notes: Commercial use, and any integration into a live product or automated system, needs a written agreement. Anonymous access is rate limited.
-
 - id: aisstream
   name: AISStream
   url: https://aisstream.io/

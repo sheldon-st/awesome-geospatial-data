@@ -1,0 +1,103 @@
+name: Suggest a source
+description: Propose a publicly accessible geospatial dataset, API or feed for the list.
+title: "Add: "
+labels: ["suggestion"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Check the [inclusion criteria](../blob/main/contributing.md#inclusion-criteria) first. Sources must be free to access, from an authoritative publisher, and available to programs through a download, API, service or stream.
+  - type: input
+    id: name
+    attributes:
+      label: Name
+      description: The product's own name.
+    validations:
+      required: true
+  - type: input
+    id: url
+    attributes:
+      label: URL
+      description: Landing or documentation page that leads to machine access (HTTPS).
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: One sentence on what the data contains and what makes it useful.
+    validations:
+      required: true
+  - type: dropdown
+    id: section
+    attributes:
+      label: Section
+      options:
+        - Catalogs and Aggregators
+        - Base Maps and Reference
+        - Boundaries and Administrative Units
+        - Population and Society
+        - Buildings and Infrastructure
+        - Imagery and Earth Observation
+        - Elevation and Bathymetry
+        - Land Cover and Biodiversity
+        - Air Quality and Environment
+        - Weather and Climate
+        - Natural Hazards
+        - Water and Oceans
+        - Transport and Mobility
+        - Aviation, Maritime and Space
+        - Street-Level Imagery
+        - National Geoportals
+        - Not sure
+    validations:
+      required: true
+  - type: input
+    id: publisher
+    attributes:
+      label: Publisher
+    validations:
+      required: true
+  - type: input
+    id: coverage
+    attributes:
+      label: Coverage
+      description: Global, a continent, or ISO 3166 country or subdivision codes (for example USA, US-CA).
+    validations:
+      required: true
+  - type: dropdown
+    id: access
+    attributes:
+      label: Access
+      options:
+        - Public (no account)
+        - Free key or registration
+    validations:
+      required: true
+  - type: input
+    id: license
+    attributes:
+      label: License and link to terms
+      description: For example "CC BY 4.0 — https://…". Write "unknown" if you couldn't find terms.
+    validations:
+      required: true
+  - type: input
+    id: interfaces
+    attributes:
+      label: Interfaces and formats
+      description: For example "REST API, bulk download; GeoJSON, GeoParquet".
+  - type: checkboxes
+    id: realtime
+    attributes:
+      label: Freshness
+      options:
+        - label: Updates at least hourly
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checks
+      options:
+        - label: I opened the link and confirmed the data can be fetched without payment.
+          required: true
+        - label: This source is not already in the list.
+          required: true

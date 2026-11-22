@@ -1,0 +1,27 @@
+{
+  "name": "awesome-geospatial-data",
+  "private": true,
+  "description": "Curated list of publicly accessible geospatial data, APIs and live feeds.",
+  "license": "CC0-1.0",
+  "type": "module",
+  "packageManager": "pnpm@11.21.0",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "validate": "node scripts/validate.mjs",
+    "build": "node scripts/build.mjs",
+    "check": "node scripts/build.mjs --check",
+    "lint": "awesome-lint",
+    "test": "node --test",
+    "verify": "pnpm run test && pnpm run check && pnpm run lint"
+  },
+  "dependencies": {
+    "ajv": "8.20.0",
+    "ajv-formats": "3.0.1",
+    "yaml": "2.9.1"
+  },
+  "devDependencies": {
+    "awesome-lint": "2.3.0"
+  }
+}

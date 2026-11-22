@@ -1,0 +1,51 @@
+# Ordered list of README sections. Only sections with at least one entry are rendered.
+# `id` is what entries reference in data/sources.yml; `title` becomes the README heading.
+
+- id: catalogs
+  title: Catalogs and Aggregators
+  description: Portals, STAC catalogs and open-data registries that index many datasets. Start here when a theme below has no entry for your area.
+- id: base-maps
+  title: Base Maps and Reference
+  description: General-purpose map layers such as roads, places, land, water and cultural features.
+- id: boundaries
+  title: Boundaries and Administrative Units
+  description: Country, subnational, statistical and maritime boundaries.
+- id: population
+  title: Population and Society
+  description: Population grids, census geography and socioeconomic statistics with geographic keys.
+- id: buildings-infrastructure
+  title: Buildings and Infrastructure
+  description: Building footprints, energy, utilities and other built assets.
+- id: imagery
+  title: Imagery and Earth Observation
+  description: Satellite, aerial and weather-satellite imagery, plus the catalogs that serve them.
+- id: elevation
+  title: Elevation and Bathymetry
+  description: Terrain models, hillshades, lidar and seafloor depth.
+- id: land-cover-biodiversity
+  title: Land Cover and Biodiversity
+  description: Land cover, vegetation, forests and species occurrence.
+- id: air-quality
+  title: Air Quality and Environment
+  description: Air pollution observations and other environmental monitoring.
+- id: weather-climate
+  title: Weather and Climate
+  description: Observations, forecasts, warnings and climate reanalysis.
+- id: natural-hazards
+  title: Natural Hazards
+  description: Earthquakes, wildfires, tropical cyclones, floods and multi-hazard alerting.
+- id: water-oceans
+  title: Water and Oceans
+  description: River gauges, tides, buoys, hydrography and marine data.
+- id: transport
+  title: Transport and Mobility
+  description: Public transit, shared mobility, roads and traffic.
+- id: aviation-maritime-space
+  title: Aviation, Maritime and Space
+  description: Aircraft and vessel tracking, launches, satellites and ground stations.
+- id: street-level
+  title: Street-Level Imagery
+  description: Open street-level and ground photo collections.
+- id: national-geoportals
+  title: National Geoportals
+  description: National spatial data infrastructures and geoportals, the entry point for country-specific data.

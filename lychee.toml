@@ -1,0 +1,14 @@
+# Link checker settings for .github/workflows/links.yml (https://lychee.cli.rs).
+max_retries = 3
+retry_wait_time = 10
+timeout = 30
+max_concurrency = 8
+user_agent = "Mozilla/5.0 (compatible; awesome-geospatial-data link check)"
+
+# 429 = rate limited and 403 = bot protection on some agency sites; neither means the link is dead.
+accept = ["200..=299", "403", "429"]
+
+exclude = [
+  # Relative issue links in contributing.md resolve only on github.com.
+  "^\\.\\./\\.\\./issues",
+]

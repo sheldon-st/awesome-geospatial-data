@@ -1,0 +1,155 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://github.com/sheldon-st/awesome-geospatial-data/schema/source.schema.json",
+  "title": "Awesome Geospatial Data source list",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+      "id",
+      "name",
+      "url",
+      "description",
+      "section",
+      "publisher",
+      "publisher_type",
+      "coverage",
+      "access",
+      "license",
+      "interfaces",
+      "formats",
+      "realtime",
+      "added",
+      "last_verified"
+    ],
+    "properties": {
+      "id": {
+        "description": "Stable kebab-case identifier. Never reuse an id after removal.",
+        "type": "string",
+        "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+      },
+      "name": { "type": "string", "minLength": 2, "maxLength": 80 },
+      "url": {
+        "description": "Landing page or documentation for machine access. HTTPS only.",
+        "type": "string",
+        "format": "uri",
+        "pattern": "^https://"
+      },
+      "description": {
+        "description": "One sentence: what the data is and what makes it useful. Starts with a capital, ends with a period.",
+        "type": "string",
+        "minLength": 20,
+        "maxLength": 200
+      },
+      "section": { "description": "An id from data/sections.yml.", "type": "string" },
+      "publisher": { "type": "string", "minLength": 2 },
+      "publisher_type": {
+        "type": "string",
+        "enum": ["government", "intergovernmental", "academic", "nonprofit", "community", "commercial"]
+      },
+      "coverage": {
+        "description": "Global, a continent, an ISO 3166-1 alpha-3 country code or an ISO 3166-2 subdivision code.",
+        "type": "array",
+        "minItems": 1,
+        "uniqueItems": true,
+        "items": {
+          "type": "string",
+          "pattern": "^(Global|Africa|Americas|Asia|Europe|Oceania|Antarctica|[A-Z]{3}|[A-Z]{2}-[A-Z0-9]{1,3})$"
+        }
+      },
+      "access": {
+        "description": "public = no account needed; free-key = free registration or API key required.",
+        "type": "string",
+        "enum": ["public", "free-key"]
+      },
+      "license": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["name", "status"],
+        "properties": {
+          "name": { "description": "Short display name, e.g. CC BY 4.0, ODbL, Public domain.", "type": "string" },
+          "url": { "type": "string", "format": "uri", "pattern": "^https?://" },
+          "status": {
+            "description": "open = permits reuse including commercial; restricted = non-commercial or other limits; unclear = terms not found or ambiguous.",
+            "type": "string",
+            "enum": ["open", "restricted", "unclear"]
+          }
+        }
+      },
+      "interfaces": {
+        "type": "array",
+        "minItems": 1,
+        "uniqueItems": true,
+        "items": {
+          "type": "string",
+          "enum": [
+            "API",
+            "ArcGIS REST",
+            "Bulk cloud",
+            "CAP",
+            "Download",
+            "GBFS",
+            "GTFS",
+            "GTFS-RT",
+            "OGC API",
+            "SensorThings",
+            "STAC",
+            "Stream",
+            "Tiles",
+            "WCS",
+            "WFS",
+            "WMS",
+            "WMTS"
+          ]
+        }
+      },
+      "formats": {
+        "type": "array",
+        "minItems": 1,
+        "uniqueItems": true,
+        "items": {
+          "type": "string",
+          "enum": [
+            "COG",
+            "CSV",
+            "GeoJSON",
+            "GeoPackage",
+            "GeoParquet",
+            "GeoTIFF",
+            "GRIB2",
+            "HDF5",
+            "JSON",
+            "JPEG",
+            "KML",
+            "LAZ",
+            "MVT",
+            "NetCDF",
+            "OSM PBF",
+            "Parquet",
+            "PMTiles",
+            "PNG",
+            "Protobuf",
+            "QuakeML",
+            "Shapefile",
+            "TopoJSON",
+            "XML",
+            "Zarr"
+          ]
+        }
+      },
+      "realtime": {
+        "description": "true when the data updates at least hourly.",
+        "type": "boolean"
+      },
+      "update_frequency": { "type": "string" },
+      "added": { "type": "string", "format": "date" },
+      "last_verified": {
+        "description": "Date a maintainer last confirmed the link, access route and license.",
+        "type": "string",
+        "format": "date"
+      },
+      "notes": { "description": "Maintainer notes. Not rendered.", "type": "string" }
+    }
+  }
+}

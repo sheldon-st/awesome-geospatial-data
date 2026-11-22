@@ -1,0 +1,64 @@
+# Source of truth for the list. README.md is generated from this file by `pnpm build`.
+# Field reference and inclusion criteria: contributing.md. Schema: schema/source.schema.json.
+# Entries are sorted by name within each section at build time, so order here does not matter.
+
+- id: natural-earth
+  name: Natural Earth
+  url: https://www.naturalearthdata.com/
+  description: Global cultural, physical and raster base map layers at 1:10m, 1:50m and 1:110m scales.
+  section: base-maps
+  publisher: Natural Earth
+  publisher_type: community
+  coverage: [Global]
+  access: public
+  license:
+    name: Public domain
+    url: https://www.naturalearthdata.com/about/terms-of-use/
+    status: open
+  interfaces: [Download]
+  formats: [Shapefile, GeoPackage]
+  realtime: false
+  update_frequency: irregular releases
+  added: 2026-11-22
+  last_verified: 2026-11-22
+
+- id: geoboundaries
+  name: geoBoundaries
+  url: https://www.geoboundaries.org/
+  description: Open administrative boundaries for every country, from national borders down to local units where available.
+  section: boundaries
+  publisher: William & Mary geoLab
+  publisher_type: academic
+  coverage: [Global]
+  access: public
+  license:
+    name: Varies by boundary
+    url: https://www.geoboundaries.org/api.html
+    status: open
+  interfaces: [API, Download]
+  formats: [GeoJSON, Shapefile, TopoJSON]
+  realtime: false
+  update_frequency: per-country releases
+  added: 2026-11-22
+  last_verified: 2026-11-22
+  notes: The gbOpen release uses open licenses, but the exact license and vintage differ by country and level. Check the per-boundary metadata before reuse.
+
+- id: usgs-earthquake-feeds
+  name: USGS Earthquake Feeds
+  url: https://earthquake.usgs.gov/earthquakes/feed/v1.0/geojson.php
+  description: Worldwide earthquake events with magnitudes and revisions, refreshed every minute.
+  section: natural-hazards
+  publisher: U.S. Geological Survey
+  publisher_type: government
+  coverage: [Global]
+  access: public
+  license:
+    name: Public domain
+    url: https://www.usgs.gov/information-policies-and-instructions/copyrights-and-credits
+    status: open
+  interfaces: [API]
+  formats: [GeoJSON, CSV, KML, QuakeML]
+  realtime: true
+  update_frequency: 1 minute
+  added: 2026-11-22
+  last_verified: 2026-11-22

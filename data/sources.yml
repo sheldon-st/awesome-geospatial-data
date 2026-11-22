@@ -62,3 +62,551 @@
   update_frequency: 1 minute
   added: 2026-11-22
   last_verified: 2026-11-22
+
+# --- Natural hazards ---------------------------------------------------------
+
+- id: nasa-firms
+  name: NASA FIRMS Active Fire Data
+  url: https://firms.modaps.eosdis.nasa.gov/active_fire/
+  description: Global satellite thermal hotspot detections from MODIS and VIIRS, published within hours of each overpass.
+  section: natural-hazards
+  publisher: NASA LANCE / EOSDIS
+  publisher_type: government
+  coverage: [Global]
+  access: public
+  license:
+    name: Public domain
+    url: https://www.earthdata.nasa.gov/engage/open-data-services-software-policies/data-use-guidance
+    status: open
+  interfaces: [Download]
+  formats: [CSV, Shapefile, KML]
+  realtime: true
+  update_frequency: near real time
+  added: 2026-11-22
+  last_verified: 2026-11-22
+  notes: The 24-hour, 48-hour and 7-day files need no key. The area/country API and WMS/WFS need a free MAP_KEY. Detections are hotspots, not fire perimeters.
+
+- id: gdacs
+  name: Global Disaster Alert and Coordination System (GDACS)
+  url: https://www.gdacs.org/
+  description: Automated alerts and impact estimates for earthquakes, tropical cyclones, floods, volcanoes, droughts and wildfires worldwide.
+  section: natural-hazards
+  publisher: European Commission JRC and UN OCHA
+  publisher_type: intergovernmental
+  coverage: [Global]
+  access: public
+  license:
+    name: No reuse license stated
+    url: https://www.gdacs.org/About/termofuse.aspx
+    status: unclear
+  interfaces: [API, CAP]
+  formats: [GeoJSON, XML]
+  realtime: true
+  update_frequency: event driven
+  added: 2026-11-22
+  last_verified: 2026-11-22
+  notes: GDACS publishes a disclaimer but no explicit reuse license. Confirm terms before redistributing.
+
+- id: nasa-eonet
+  name: NASA Earth Observatory Natural Event Tracker (EONET)
+  url: https://eonet.gsfc.nasa.gov/docs/v3
+  description: Curated natural events such as wildfires, severe storms, volcanoes and sea ice, linked to their source imagery.
+  section: natural-hazards
+  publisher: NASA Earth Observatory
+  publisher_type: government
+  coverage: [Global]
+  access: public
+  license:
+    name: Public domain
+    url: https://www.earthdata.nasa.gov/engage/open-data-services-software-policies/data-use-guidance
+    status: open
+  interfaces: [API]
+  formats: [GeoJSON, JSON]
+  realtime: false
+  update_frequency: irregular, as events are curated
+  added: 2026-11-22
+  last_verified: 2026-11-22
+
+- id: noaa-nhc-gis
+  name: NOAA National Hurricane Center GIS Data
+  url: https://www.nhc.noaa.gov/gis/
+  description: Active tropical cyclone positions, forecast cones, tracks, wind fields and storm surge for the Atlantic and eastern Pacific.
+  section: natural-hazards
+  publisher: NOAA National Hurricane Center
+  publisher_type: government
+  coverage: [Americas]
+  access: public
+  license:
+    name: Public domain
+    url: https://www.weather.gov/disclaimer
+    status: open
+  interfaces: [Download, API, ArcGIS REST]
+  formats: [Shapefile, KML, JSON]
+  realtime: false
+  update_frequency: every 3 to 6 hours during active storms
+  added: 2026-11-22
+  last_verified: 2026-11-22
+
+- id: nifc-open-data
+  name: NIFC Wildland Fire Open Data
+  url: https://data-nifc.opendata.arcgis.com/
+  description: Current U.S. wildfire incident locations and perimeters from interagency fire reporting, plus historical perimeters.
+  section: natural-hazards
+  publisher: National Interagency Fire Center
+  publisher_type: government
+  coverage: [USA]
+  access: public
+  license:
+    name: Public domain
+    url: https://data-nifc.opendata.arcgis.com/
+    status: open
+  interfaces: [ArcGIS REST, Download]
+  formats: [GeoJSON, CSV, Shapefile, KML]
+  realtime: true
+  update_frequency: near real time
+  added: 2026-11-22
+  last_verified: 2026-11-22
+
+# --- Weather and climate -----------------------------------------------------
+
+- id: nws-api
+  name: National Weather Service API
+  url: https://www.weather.gov/documentation/services-web-api
+  description: U.S. point and gridded forecasts, station observations, and active watches and warnings with their polygons.
+  section: weather-climate
+  publisher: NOAA National Weather Service
+  publisher_type: government
+  coverage: [USA]
+  access: public
+  license:
+    name: Public domain
+    url: https://www.weather.gov/disclaimer
+    status: open
+  interfaces: [API, CAP]
+  formats: [GeoJSON, JSON, XML]
+  realtime: true
+  update_frequency: minutes
+  added: 2026-11-22
+  last_verified: 2026-11-22
+  notes: Requests must send a User-Agent that identifies the application.
+
+- id: met-norway-api
+  name: MET Norway Weather API
+  url: https://api.met.no/
+  description: Global point forecasts, Nordic nowcasts and official Norwegian weather warnings from the Norwegian Meteorological Institute.
+  section: weather-climate
+  publisher: Norwegian Meteorological Institute
+  publisher_type: government
+  coverage: [Global]
+  access: public
+  license:
+    name: CC BY 4.0 / NLOD 2.0
+    url: https://api.met.no/doc/License
+    status: open
+  interfaces: [API, CAP]
+  formats: [GeoJSON, JSON, XML]
+  realtime: true
+  update_frequency: hourly or faster
+  added: 2026-11-22
+  last_verified: 2026-11-22
+  notes: Requires an identifying User-Agent and caching per the terms of service.
+
+- id: aviation-weather-api
+  name: Aviation Weather Center Data API
+  url: https://aviationweather.gov/data/api/
+  description: Worldwide METAR and TAF reports plus SIGMETs, AIRMETs, pilot reports and other aviation advisories.
+  section: weather-climate
+  publisher: NOAA NWS Aviation Weather Center
+  publisher_type: government
+  coverage: [Global]
+  access: public
+  license:
+    name: Public domain
+    url: https://www.weather.gov/disclaimer
+    status: open
+  interfaces: [API]
+  formats: [JSON, GeoJSON, XML, CSV]
+  realtime: true
+  update_frequency: minutes
+  added: 2026-11-22
+  last_verified: 2026-11-22
+
+# --- Water and oceans --------------------------------------------------------
+
+- id: usgs-water-data-apis
+  name: USGS Water Data APIs
+  url: https://api.waterdata.usgs.gov/
+  description: Streamflow, water level and water quality from U.S. monitoring locations, including latest continuous readings, via OGC API.
+  section: water-oceans
+  publisher: U.S. Geological Survey
+  publisher_type: government
+  coverage: [USA]
+  access: public
+  license:
+    name: Public domain
+    url: https://www.usgs.gov/information-policies-and-instructions/copyrights-and-credits
+    status: open
+  interfaces: [OGC API, API]
+  formats: [GeoJSON, JSON, CSV]
+  realtime: true
+  update_frequency: 15 minutes for continuous sensors
+  added: 2026-11-22
+  last_verified: 2026-11-22
+  notes: Anonymous access is rate limited; a free api.data.gov key raises the limit.
+
+- id: noaa-nwps-api
+  name: NOAA National Water Prediction Service API
+  url: https://api.water.noaa.gov/nwps/v1/docs/
+  description: Observed and forecast stage and flow for U.S. river gauges, with flood categories and thresholds.
+  section: water-oceans
+  publisher: NOAA National Water Prediction Service
+  publisher_type: government
+  coverage: [USA]
+  access: public
+  license:
+    name: Public domain
+    url: https://www.weather.gov/disclaimer
+    status: open
+  interfaces: [API, Download]
+  formats: [JSON, CSV]
+  realtime: true
+  update_frequency: hourly observations, forecasts several times a day
+  added: 2026-11-22
+  last_verified: 2026-11-22
+
+- id: noaa-tides-currents-api
+  name: NOAA Tides and Currents API
+  url: https://api.tidesandcurrents.noaa.gov/api/prod/
+  description: Water levels, tide predictions, currents and meteorological data from U.S. coastal and Great Lakes stations.
+  section: water-oceans
+  publisher: NOAA Center for Operational Oceanographic Products and Services
+  publisher_type: government
+  coverage: [USA]
+  access: public
+  license:
+    name: Public domain
+    url: https://www.weather.gov/disclaimer
+    status: open
+  interfaces: [API]
+  formats: [JSON, CSV, XML]
+  realtime: true
+  update_frequency: 6 minutes
+  added: 2026-11-22
+  last_verified: 2026-11-22
+  notes: Water levels are relative to a chosen datum (MLLW, IGLD and others). Keep the datum with the value.
+
+- id: noaa-ndbc
+  name: NOAA National Data Buoy Center
+  url: https://www.ndbc.noaa.gov/
+  description: Latest observations from moored buoys and coastal stations worldwide, including waves, wind, pressure and water temperature.
+  section: water-oceans
+  publisher: NOAA National Data Buoy Center
+  publisher_type: government
+  coverage: [Global]
+  access: public
+  license:
+    name: Public domain
+    url: https://www.weather.gov/disclaimer
+    status: open
+  interfaces: [Download]
+  formats: [Text, KML, NetCDF]
+  realtime: true
+  update_frequency: hourly or faster, varies by station
+  added: 2026-11-22
+  last_verified: 2026-11-22
+
+- id: ea-flood-monitoring
+  name: Environment Agency Flood Monitoring API
+  url: https://environment.data.gov.uk/flood-monitoring/doc/reference
+  description: Near real-time river, sea and groundwater levels, rainfall and flood warnings for England, updated every 15 minutes.
+  section: water-oceans
+  publisher: Environment Agency
+  publisher_type: government
+  coverage: [GB-ENG]
+  access: public
+  license:
+    name: OGL 3.0
+    url: https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/
+    status: open
+  interfaces: [API]
+  formats: [JSON, CSV]
+  realtime: true
+  update_frequency: 15 minutes
+  added: 2026-11-22
+  last_verified: 2026-11-22
+
+- id: emodnet
+  name: EMODnet
+  url: https://emodnet.ec.europa.eu/en
+  description: European marine data portals for bathymetry, geology, seabed habitats, chemistry, biology, physics and human activities.
+  section: water-oceans
+  publisher: European Marine Observation and Data Network
+  publisher_type: intergovernmental
+  coverage: [Europe]
+  access: public
+  license:
+    name: CC BY 4.0
+    url: https://emodnet.ec.europa.eu/en/human-activities
+    status: open
+  interfaces: [WMS, WFS, Download]
+  formats: [CSV, GeoTIFF, NetCDF, Shapefile]
+  realtime: false
+  update_frequency: varies by product
+  added: 2026-11-22
+  last_verified: 2026-11-22
+  notes: CC BY 4.0 confirmed for Human Activities. Check each thematic portal's terms before reuse.
+
+# --- Elevation and bathymetry ------------------------------------------------
+
+- id: gebco-grid
+  name: GEBCO Gridded Bathymetry
+  url: https://www.gebco.net/data-products/gridded-bathymetry-data
+  description: Global terrain model of ocean depth and land elevation on a 15 arc-second grid, released annually.
+  section: elevation
+  publisher: GEBCO Compilation Group
+  publisher_type: intergovernmental
+  coverage: [Global]
+  access: public
+  license:
+    name: Public domain
+    url: https://www.gebco.net/data-products/gridded-bathymetry-data
+    status: open
+  interfaces: [Download, WMS]
+  formats: [NetCDF, GeoTIFF]
+  realtime: false
+  update_frequency: annual
+  added: 2026-11-22
+  last_verified: 2026-11-22
+
+- id: usgs-3dep
+  name: USGS 3D Elevation Program (3DEP)
+  url: https://www.usgs.gov/3d-elevation-program
+  description: Lidar point clouds and bare-earth elevation models for the United States, from 1 meter to 1 arc-second resolution.
+  section: elevation
+  publisher: U.S. Geological Survey
+  publisher_type: government
+  coverage: [USA]
+  access: public
+  license:
+    name: Public domain
+    url: https://www.usgs.gov/information-policies-and-instructions/copyrights-and-credits
+    status: open
+  interfaces: [Download, WMS, ArcGIS REST, Bulk cloud]
+  formats: [GeoTIFF, LAZ]
+  realtime: false
+  update_frequency: ongoing acquisitions
+  added: 2026-11-22
+  last_verified: 2026-11-22
+
+# --- Boundaries --------------------------------------------------------------
+
+- id: marine-regions
+  name: Marine Regions
+  url: https://www.marineregions.org/
+  description: Reference maritime boundaries, including exclusive economic zones, territorial seas, and named oceans and seas.
+  section: boundaries
+  publisher: Flanders Marine Institute (VLIZ)
+  publisher_type: academic
+  coverage: [Global]
+  access: public
+  license:
+    name: CC BY 4.0
+    url: https://www.marineregions.org/disclaimer.php
+    status: open
+  interfaces: [WMS, WFS, Download, API]
+  formats: [Shapefile, GeoPackage]
+  realtime: false
+  update_frequency: versioned releases
+  added: 2026-11-22
+  last_verified: 2026-11-22
+
+- id: census-tigerweb
+  name: U.S. Census TIGERweb
+  url: https://tigerweb.geo.census.gov/tigerwebmain/TIGERweb_main.html
+  description: Current and vintage U.S. census geography, from states and counties down to tracts and blocks, as map and feature services.
+  section: boundaries
+  publisher: U.S. Census Bureau
+  publisher_type: government
+  coverage: [USA]
+  access: public
+  license:
+    name: Public domain
+    status: open
+  interfaces: [WMS, ArcGIS REST]
+  formats: [GeoJSON, JSON, PNG]
+  realtime: false
+  update_frequency: annual vintages
+  added: 2026-11-22
+  last_verified: 2026-11-22
+  notes: Label the geography vintage. Bulk shapefiles are published separately as TIGER/Line.
+
+# --- Imagery -----------------------------------------------------------------
+
+- id: nasa-gibs
+  name: NASA Global Imagery Browse Services (GIBS)
+  url: https://nasa-gibs.github.io/gibs-api-docs/
+  description: More than 1,000 global satellite imagery layers from MODIS, VIIRS and other instruments, served as map tiles.
+  section: imagery
+  publisher: NASA ESDIS
+  publisher_type: government
+  coverage: [Global]
+  access: public
+  license:
+    name: Public domain
+    url: https://www.earthdata.nasa.gov/engage/open-data-services-software-policies/data-use-guidance
+    status: open
+  interfaces: [WMTS, WMS, Tiles]
+  formats: [PNG, JPEG]
+  realtime: false
+  update_frequency: daily, near real time within hours
+  added: 2026-11-22
+  last_verified: 2026-11-22
+
+- id: earth-search
+  name: Earth Search
+  url: https://element84.com/earth-search/
+  description: Public STAC API for cloud-optimized Sentinel-2, Landsat, Sentinel-1 and Copernicus DEM data hosted on AWS.
+  section: imagery
+  publisher: Element 84
+  publisher_type: commercial
+  coverage: [Global]
+  access: public
+  license:
+    name: Varies by collection
+    url: https://earth-search.aws.element84.com/v1
+    status: open
+  interfaces: [STAC, Bulk cloud]
+  formats: [COG]
+  realtime: false
+  update_frequency: as new scenes are published
+  added: 2026-11-22
+  last_verified: 2026-11-22
+  notes: Sentinel data follows Copernicus terms and Landsat is public domain. Each collection's license is in its STAC metadata.
+
+- id: planetary-computer
+  name: Microsoft Planetary Computer
+  url: https://planetarycomputer.microsoft.com/catalog
+  description: Petabyte-scale STAC catalog of Earth observation data, including Landsat, Sentinel, NAIP aerial imagery and land cover.
+  section: imagery
+  publisher: Microsoft
+  publisher_type: commercial
+  coverage: [Global]
+  access: public
+  license:
+    name: Varies by collection
+    url: https://planetarycomputer.microsoft.com/catalog
+    status: open
+  interfaces: [STAC, API, Tiles]
+  formats: [COG, Zarr, GeoParquet, NetCDF]
+  realtime: false
+  update_frequency: as new scenes are published
+  added: 2026-11-22
+  last_verified: 2026-11-22
+  notes: Asset URLs need a short-lived SAS token from the anonymous token endpoint. Each collection lists its own license.
+
+- id: noaa-emergency-response-imagery
+  name: NOAA Emergency Response Imagery
+  url: https://storms.ngs.noaa.gov/
+  description: High-resolution aerial imagery flown after U.S. hurricanes and other disasters, often within days of the event.
+  section: imagery
+  publisher: NOAA National Geodetic Survey
+  publisher_type: government
+  coverage: [USA]
+  access: public
+  license:
+    name: Public domain
+    status: open
+  interfaces: [Tiles, Download]
+  formats: [JPEG, GeoTIFF]
+  realtime: false
+  update_frequency: event driven
+  added: 2026-11-22
+  last_verified: 2026-11-22
+
+# --- Air quality -------------------------------------------------------------
+
+- id: openaq
+  name: OpenAQ
+  url: https://docs.openaq.org/
+  description: Air quality measurements from government monitors and research sensors worldwide, harmonized into one API.
+  section: air-quality
+  publisher: OpenAQ
+  publisher_type: nonprofit
+  coverage: [Global]
+  access: free-key
+  license:
+    name: Varies by provider
+    url: https://docs.openaq.org/about/terms
+    status: unclear
+  interfaces: [API, Bulk cloud]
+  formats: [JSON, CSV]
+  realtime: true
+  update_frequency: hourly or faster, varies by provider
+  added: 2026-11-22
+  last_verified: 2026-11-22
+  notes: Each location carries its provider's license. Values are raw pollutant concentrations, not AQI.
+
+# --- Transport ---------------------------------------------------------------
+
+- id: mobility-database
+  name: Mobility Database
+  url: https://mobilitydatabase.org/
+  description: Catalog of thousands of GTFS, GTFS Realtime and GBFS feeds worldwide, with validation reports and download links.
+  section: transport
+  publisher: MobilityData
+  publisher_type: nonprofit
+  coverage: [Global]
+  access: public
+  license:
+    name: CC0 (catalog), feeds vary
+    url: https://github.com/MobilityData/mobility-database-catalogs#license
+    status: open
+  interfaces: [API, Download, GTFS, GTFS-RT, GBFS]
+  formats: [CSV, JSON, Protobuf]
+  realtime: false
+  update_frequency: catalog updated continuously
+  added: 2026-11-22
+  last_verified: 2026-11-22
+  notes: The catalog CSV is public. The API needs a free account. Each feed has its own provider terms.
+
+- id: digitraffic
+  name: Digitraffic
+  url: https://www.digitraffic.fi/en/
+  description: Real-time Finnish road, rail and marine traffic data, including AIS vessel positions, train locations and road weather.
+  section: transport
+  publisher: Fintraffic
+  publisher_type: government
+  coverage: [FIN]
+  access: public
+  license:
+    name: CC BY 4.0
+    url: https://www.digitraffic.fi/en/terms-of-service/
+    status: open
+  interfaces: [API, Stream]
+  formats: [JSON, GeoJSON]
+  realtime: true
+  update_frequency: seconds to minutes
+  added: 2026-11-22
+  last_verified: 2026-11-22
+
+# --- Aviation, maritime and space -------------------------------------------
+
+- id: aisstream
+  name: AISStream
+  url: https://aisstream.io/
+  description: Free WebSocket stream of global AIS vessel positions and static ship data, filterable by bounding box.
+  section: aviation-maritime-space
+  publisher: aisstream.io
+  publisher_type: community
+  coverage: [Global]
+  access: free-key
+  license:
+    name: No reuse license stated
+    url: https://aisstream.io/documentation
+    status: unclear
+  interfaces: [Stream]
+  formats: [JSON]
+  realtime: true
+  update_frequency: seconds
+  added: 2026-11-22
+  last_verified: 2026-11-22

@@ -60,6 +60,7 @@ Country, subnational, statistical and maritime boundaries.
 
 Population grids, census geography and socioeconomic statistics with geographic keys.
 
+- [CDC PLACES](https://data.cdc.gov/d/cwsq-ngmh) - Model-based estimates of chronic disease, risk behaviors and health outcomes for U.S. counties, places, census tracts and ZIP code areas. (`USA` `API` `Download` `CSV` `JSON` `GeoJSON` `Public domain`)
 - [Global Human Settlement Layer (GHSL)](https://human-settlement.emergency.copernicus.eu/datasets.php) - Global grids of population, built-up surface, building height and settlement type from 1975 to 2030. (`Global` `Download` `GeoTIFF` `EU reuse with acknowledgment`)
 - [U.S. Census Data API](https://www.census.gov/data/developers.html) - American Community Survey, decennial census and economic statistics for U.S. geographies, from states down to block groups. (`USA` `API` `JSON` `Public domain`)
 - [WorldPop](https://hub.worldpop.org/) - Gridded population estimates at 100 m and 1 km for every country, with age and sex breakdowns, from 2000 onward. (`Global` `Download` `API` `GeoTIFF` `CC BY 4.0`)
@@ -99,6 +100,7 @@ Land cover, vegetation, forests and species occurrence.
 - [ESA WorldCover](https://esa-worldcover.org/) - Global land cover maps at 10 m resolution for 2020 and 2021, with 11 classes derived from Sentinel-1 and Sentinel-2. (`Global` `Download` `Bulk cloud` `COG` `CC BY 4.0`)
 - [GBIF](https://techdocs.gbif.org/en/openapi/) - Billions of species occurrence records from museums, surveys and citizen science, searchable by taxon, place and time. (`Global` `API` `Download` `Bulk cloud` `CSV` `JSON` `Parquet` `CC0 / CC BY / CC BY-NC (per dataset)` `⚠️`)
 - [USDA Cropland Data Layer](https://www.nass.usda.gov/Research_and_Science/Cropland/SARS1a.php) - Annual crop-specific land cover for the United States, identifying the crop grown in each pixel. (`USA` `Download` `WMS` `GeoTIFF` `Public domain`)
+- [USFWS National Wetlands Inventory](https://www.fws.gov/program/national-wetlands-inventory/data-download) - Mapped wetlands and deepwater habitats across the United States, classified by type, downloadable by state or watershed. (`USA` `Download` `ArcGIS REST` `WMS` `Shapefile` `Public domain`)
 
 ## Air Quality and Environment
 
@@ -106,6 +108,7 @@ Air pollution observations and other environmental monitoring.
 
 - [Copernicus Atmosphere Monitoring Service (CAMS)](https://ads.atmosphere.copernicus.eu/datasets/cams-global-atmospheric-composition-forecasts) - Global forecasts and reanalysis of aerosols, ozone, wildfire smoke, dust and other atmospheric pollutants. (`Global` `🔑` `API` `GRIB` `NetCDF` `CC BY 4.0`)
 - [EPA AirNow API](https://docs.airnowapi.org/) - Current and forecast Air Quality Index and pollutant observations for U.S. reporting areas and monitoring sites. (`USA` `⚡` `🔑` `API` `Download` `JSON` `CSV` `XML` `KML` `AirNow data use guidelines`)
+- [NASA TEMPO](https://www.earthdata.nasa.gov/data/instruments/tempo) - Hourly daytime satellite measurements of nitrogen dioxide, formaldehyde, ozone and aerosols over North America from geostationary orbit. (`Americas` `⚡` `🔑` `Download` `API` `NetCDF` `Public domain`)
 - [OpenAQ](https://docs.openaq.org/) - Air quality measurements from government monitors and research sensors worldwide, harmonized into one API. (`Global` `⚡` `🔑` `API` `Bulk cloud` `JSON` `CSV` `Varies by provider` `⚠️`)
 
 ## Weather and Climate
@@ -117,6 +120,7 @@ Observations, forecasts, warnings and climate reanalysis.
 - [Global Historical Climatology Network Daily (GHCN-Daily)](https://www.ncei.noaa.gov/products/land-based-station/global-historical-climatology-network-daily) - Daily temperature, precipitation and snow observations from more than 100,000 stations worldwide, some going back over 175 years. (`Global` `API` `Download` `Bulk cloud` `CSV` `JSON` `CC0`)
 - [MET Norway Weather API](https://api.met.no/) - Global point forecasts, Nordic nowcasts and official Norwegian weather warnings from the Norwegian Meteorological Institute. (`Global` `⚡` `API` `CAP` `GeoJSON` `JSON` `XML` `CC BY 4.0 / NLOD 2.0`)
 - [National Weather Service API](https://www.weather.gov/documentation/services-web-api) - U.S. point and gridded forecasts, station observations, and active watches and warnings with their polygons. (`USA` `⚡` `API` `CAP` `GeoJSON` `JSON` `XML` `Public domain`)
+- [NOAA Storm Prediction Center GIS Data](https://www.spc.noaa.gov/gis/) - U.S. severe thunderstorm, tornado, hail, wind and fire weather outlooks for days 1 to 8, plus watches and storm reports. (`USA` `Download` `GeoJSON` `KML` `Shapefile` `Public domain`)
 
 ## Natural Hazards
 
@@ -133,12 +137,14 @@ Earthquakes, wildfires, tropical cyclones, floods and multi-hazard alerting.
 
 ## Conflict and Security
 
-Georeferenced conflict and political violence events, and conflict forecasts.
+Georeferenced conflict and political violence events, conflict forecasts and displacement figures.
 
 - [ACLED](https://acleddata.com/) - Dated, geocoded political violence and protest events worldwide, with actors, event types and reported fatalities. (`Global` `🔑` `API` `Download` `CSV` `JSON` `ACLED EULA, non-commercial only` `⚠️`)
 - [GDELT Project](https://www.gdeltproject.org/) - Machine-coded global news events, including protests and armed conflict, geolocated and updated every 15 minutes, with history from 1979. (`Global` `⚡` `Download` `Bulk cloud` `API` `CSV` `JSON` `Unrestricted use with citation`)
 - [GeoConfirmed](https://geoconfirmed.org/scalar/v1) - Volunteer-verified geolocations of conflict photos and videos from Ukraine, Israel and Gaza, Sudan, Myanmar and other conflicts. (`Global` `API` `Download` `GeoJSON` `KML` `CSV` `No license stated` `⚠️`)
+- [IOM Displacement Tracking Matrix API](https://dtm.iom.int/data-and-analysis/dtm-api) - Internally displaced population figures by country and first- and second-level administrative areas, from IOM field assessments. (`Global` `🔑` `API` `JSON` `No data license stated` `⚠️`)
 - [UCDP Georeferenced Event Dataset (GED)](https://ucdp.uu.se/downloads/) - Geocoded events of organized violence worldwide from 1989, with actors, dates and fatality estimates, plus monthly candidate updates. (`Global` `Download` `API` `CSV` `JSON` `CC BY 4.0`)
+- [UNHCR Refugee Statistics API](https://api.unhcr.org/docs/refugee-statistics.html) - Refugees, asylum-seekers, internally displaced and stateless people by country of origin and asylum, yearly from 1951. (`Global` `API` `Download` `JSON` `CSV` `CC BY 4.0`)
 - [VIEWS Conflict Forecasts](https://viewsforecasting.org/) - Monthly machine-learning forecasts of conflict fatalities up to three years ahead, by country and by 0.5° grid cell. (`Global` `API` `JSON` `CSV` `No data license stated` `⚠️`)
 
 ## Water and Oceans
@@ -159,6 +165,7 @@ Public transit, shared mobility, roads and traffic.
 - [Digitraffic](https://www.digitraffic.fi/en/) - Real-time Finnish road, rail and marine traffic data, including AIS vessel positions, train locations and road weather. (`FIN` `⚡` `API` `Stream` `JSON` `GeoJSON` `CC BY 4.0`)
 - [Mobility Database](https://mobilitydatabase.org/) - Catalog of thousands of GTFS, GTFS Realtime and GBFS feeds worldwide, with validation reports and download links. (`Global` `API` `Download` `GTFS` `GTFS-RT` `GBFS` `CSV` `JSON` `Protobuf` `CC0 (catalog), feeds vary`)
 - [National Transportation Atlas Database (NTAD)](https://geodata.bts.gov/) - U.S. transportation networks and facilities, including roads, rail, ports, airports, waterways and transit stops. (`USA` `ArcGIS REST` `Download` `GeoJSON` `CSV` `Shapefile` `KML` `Varies by layer`)
+- [Transitland](https://www.transit.land/documentation) - Global directory and API of transit operators, routes, stops and schedules aggregated from thousands of GTFS and GTFS Realtime feeds. (`Global` `🔑` `API` `Tiles` `GTFS` `GTFS-RT` `JSON` `GeoJSON` `MVT` `Transitland terms; feeds vary` `⚠️`)
 
 ## Aviation, Maritime and Space
 
@@ -171,6 +178,7 @@ Aircraft and vessel tracking, launches, satellites and ground stations.
 - [CelesTrak](https://celestrak.org/NORAD/documentation/gp-data-formats.php) - Current orbital elements for active satellites and tracked debris, grouped by mission type, for orbit propagation and pass prediction. (`Global` `API` `Download` `JSON` `CSV` `XML` `Text` `No reuse license stated` `⚠️`)
 - [FAA Releasable Aircraft Database](https://www.faa.gov/licenses_certificates/aircraft_certification/aircraft_registry/releasable_aircraft_download) - Every U.S.-registered civil aircraft with owner, make, model and Mode S hex code, published as a daily download. (`USA` `Download` `CSV` `Public domain`)
 - [Global Fishing Watch API](https://globalfishingwatch.org/our-apis/) - AIS-derived vessel presence, apparent fishing effort, port visits and encounters worldwide, plus vessel identity search. (`Global` `🔑` `API` `JSON` `CSV` `GeoTIFF` `CC BY-NC 4.0` `⚠️`)
+- [Launch Library 2](https://thespacedevs.com/llapi) - Upcoming and past orbital launches worldwide, with launch pads, agencies, rockets, missions and live launch windows. (`Global` `API` `JSON` `Free use, attribution welcomed`)
 - [MarineCadastre AIS Vessel Traffic](https://marinecadastre.gov/ais/) - Historical AIS vessel positions in U.S. coastal and offshore waters from 2009 onward, with speed, heading and vessel type. (`USA` `Download` `CSV` `GeoParquet` `Public domain`)
 - [OurAirports](https://ourairports.com/data/) - Worldwide airports, runways, radio frequencies and navigational aids as CSV files, refreshed nightly. (`Global` `Download` `CSV` `Public domain`)
 

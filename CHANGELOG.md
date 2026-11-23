@@ -46,7 +46,16 @@ Additions, removals and structural changes, grouped by batch. Dates are UTC.
   - Weather and climate: GHCN-Daily.
   - Natural hazards: U.S. Drought Monitor.
 - `JPEG 2000` format value, for Sentinel-2 SAFE products.
+- Seventh batch: 8 global and U.S. runners-up. Every link and license was re-checked on 2026-11-23.
+  - Air quality: NASA TEMPO.
+  - Weather: NOAA Storm Prediction Center GIS Data.
+  - Transport: Transitland.
+  - Land cover and biodiversity: USFWS National Wetlands Inventory.
+  - Population: CDC PLACES.
+  - Space: Launch Library 2.
+  - Conflict and security (displacement): UNHCR Refugee Statistics API, IOM Displacement Tracking Matrix API.
 
 ### Changed
 
 - EMODnet notes now mention its AIS-derived vessel density maps.
+- Conflict and Security section description now includes displacement figures.

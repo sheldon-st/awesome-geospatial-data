@@ -759,3 +759,149 @@
   added: 2026-11-22
   last_verified: 2026-11-22
   notes: Most datasets use CC BY, CC BY-IGO, CC BY-SA, ODbL or CC0. Check datasets marked "Other" or "Multiple Licenses". The CKAN API is at /api/3/.
+
+# --- Batch 3: global and US (2026-11-23) ------------------------------------
+
+- id: google-open-buildings
+  name: Google Open Buildings
+  url: https://sites.research.google/gr/open-buildings/
+  description: Machine-learned building footprints with confidence scores for Africa, South and Southeast Asia, Latin America and the Caribbean.
+  section: buildings-infrastructure
+  publisher: Google Research
+  publisher_type: commercial
+  coverage: [Africa, Asia, Americas]
+  access: public
+  license:
+    name: CC BY 4.0 or ODbL (your choice)
+    url: https://sites.research.google/gr/open-buildings/
+    status: open
+  interfaces: [Download, Bulk cloud]
+  formats: [CSV]
+  realtime: false
+  update_frequency: versioned releases
+  added: 2026-11-23
+  last_verified: 2026-11-23
+  notes: Footprints are model output with a per-building confidence score. Filter by confidence for your use case.
+
+- id: eia-energy-atlas
+  name: U.S. Energy Atlas
+  url: https://atlas.eia.gov/
+  description: Mapped U.S. energy infrastructure and resources, including power plants, transmission lines, pipelines, refineries and oil and gas fields.
+  section: buildings-infrastructure
+  publisher: U.S. Energy Information Administration
+  publisher_type: government
+  coverage: [USA]
+  access: public
+  license:
+    name: Public domain
+    url: https://www.eia.gov/about/copyrights_reuse.php
+    status: open
+  interfaces: [ArcGIS REST, Download]
+  formats: [GeoJSON, CSV, Shapefile, KML]
+  realtime: false
+  update_frequency: varies by layer
+  added: 2026-11-23
+  last_verified: 2026-11-23
+
+- id: worldpop
+  name: WorldPop
+  url: https://hub.worldpop.org/
+  description: Gridded population estimates at 100 m and 1 km for every country, with age and sex breakdowns, from 2000 onward.
+  section: population
+  publisher: WorldPop, University of Southampton
+  publisher_type: academic
+  coverage: [Global]
+  access: public
+  license:
+    name: CC BY 4.0
+    url: https://hub.worldpop.org/
+    status: open
+  interfaces: [Download, API]
+  formats: [GeoTIFF]
+  realtime: false
+  update_frequency: periodic releases
+  added: 2026-11-23
+  last_verified: 2026-11-23
+  notes: Estimates are modeled from census and covariates. Unconstrained and building-constrained variants differ, so cite the exact product.
+
+- id: census-data-api
+  name: U.S. Census Data API
+  url: https://www.census.gov/data/developers.html
+  description: American Community Survey, decennial census and economic statistics for U.S. geographies, from states down to block groups.
+  section: population
+  publisher: U.S. Census Bureau
+  publisher_type: government
+  coverage: [USA]
+  access: public
+  license:
+    name: Public domain
+    url: https://www.census.gov/data/developers/about/terms-of-service.html
+    status: open
+  interfaces: [API]
+  formats: [JSON]
+  realtime: false
+  update_frequency: annual releases
+  added: 2026-11-23
+  last_verified: 2026-11-23
+  notes: A free key is needed above 500 queries a day. Join results to U.S. Census TIGERweb geography by GEOID.
+
+- id: era5
+  name: ERA5
+  url: https://cds.climate.copernicus.eu/datasets/reanalysis-era5-single-levels
+  description: Hourly global reanalysis of atmosphere, land and ocean climate variables at about 31 km resolution, from 1940 to near present.
+  section: weather-climate
+  publisher: ECMWF / Copernicus Climate Change Service
+  publisher_type: intergovernmental
+  coverage: [Global]
+  access: free-key
+  license:
+    name: CC BY 4.0
+    url: https://cds.climate.copernicus.eu/datasets/reanalysis-era5-single-levels
+    status: open
+  interfaces: [API]
+  formats: [GRIB, NetCDF]
+  realtime: false
+  update_frequency: daily, about 5 days behind real time
+  added: 2026-11-23
+  last_verified: 2026-11-23
+  notes: Climate Data Store requests are queued and large extracts can take hours. Cloud-optimized Zarr copies exist on public clouds.
+
+- id: fema-nfhl
+  name: FEMA National Flood Hazard Layer
+  url: https://www.fema.gov/flood-maps/national-flood-hazard-layer
+  description: Effective U.S. flood insurance rate map data, including flood zones, base flood elevations and floodways.
+  section: natural-hazards
+  publisher: Federal Emergency Management Agency
+  publisher_type: government
+  coverage: [USA]
+  access: public
+  license:
+    name: Public domain
+    status: open
+  interfaces: [ArcGIS REST, Download]
+  formats: [GeoJSON, JSON, Shapefile]
+  realtime: false
+  update_frequency: as flood map revisions become effective
+  added: 2026-11-23
+  last_verified: 2026-11-23
+  notes: Map service at https://hazards.fema.gov/arcgis/rest/services/public/NFHL/MapServer. Some communities have no digital flood maps yet.
+
+- id: celestrak
+  name: CelesTrak
+  url: https://celestrak.org/NORAD/documentation/gp-data-formats.php
+  description: Current orbital elements for active satellites and tracked debris, grouped by mission type, for orbit propagation and pass prediction.
+  section: aviation-maritime-space
+  publisher: CelesTrak
+  publisher_type: community
+  coverage: [Global]
+  access: public
+  license:
+    name: No reuse license stated
+    status: unclear
+  interfaces: [API, Download]
+  formats: [JSON, CSV, XML, Text]
+  realtime: false
+  update_frequency: several times a day
+  added: 2026-11-23
+  last_verified: 2026-11-23
+  notes: Elements come from U.S. Space Force tracking. Cache downloads, since groups update only a few times a day.

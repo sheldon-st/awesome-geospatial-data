@@ -117,6 +117,7 @@
             "GeoPackage",
             "GeoParquet",
             "GeoTIFF",
+            "GRIB",
             "GRIB2",
             "HDF5",
             "JSON",

@@ -31,7 +31,7 @@ const entry = (overrides = {}) => ({
 const check = (sources) => validate({ sections, sources }, { today });
 
 test('repository data is valid', () => {
-  const { errors } = validate(loadData(), { today });
+  const { errors } = validate(loadData());
   assert.deepEqual(errors, []);
 });
 

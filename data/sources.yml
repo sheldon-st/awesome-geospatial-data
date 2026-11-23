@@ -1053,3 +1053,89 @@
   added: 2026-11-23
   last_verified: 2026-11-23
   notes: Non-commercial use only, which excludes integration into commercial products. Credit "Powered by Global Fishing Watch" with a link.
+
+# --- Batch 5: conflict data (2026-11-23) ------------------------------------
+
+- id: ucdp-ged
+  name: UCDP Georeferenced Event Dataset (GED)
+  url: https://ucdp.uu.se/downloads/
+  description: Geocoded events of organized violence worldwide from 1989, with actors, dates and fatality estimates, plus monthly candidate updates.
+  section: conflict-security
+  publisher: Uppsala Conflict Data Program, Uppsala University
+  publisher_type: academic
+  coverage: [Global]
+  access: public
+  license:
+    name: CC BY 4.0
+    url: https://ucdp.uu.se/downloads/
+    status: open
+  interfaces: [Download, API]
+  formats: [CSV, JSON]
+  realtime: false
+  update_frequency: annual release, monthly candidate events
+  added: 2026-11-23
+  last_verified: 2026-11-23
+  notes: Bulk downloads need no account. The API needs a free access token requested by email. Cite the publications listed with each dataset.
+
+- id: acled
+  name: ACLED
+  url: https://acleddata.com/
+  description: Dated, geocoded political violence and protest events worldwide, with actors, event types and reported fatalities.
+  section: conflict-security
+  publisher: Armed Conflict Location & Event Data (ACLED)
+  publisher_type: nonprofit
+  coverage: [Global]
+  access: free-key
+  license:
+    name: ACLED EULA, non-commercial only
+    url: https://acleddata.com/eula/
+    status: restricted
+  interfaces: [API, Download]
+  formats: [CSV, JSON]
+  realtime: false
+  update_frequency: weekly
+  added: 2026-11-23
+  last_verified: 2026-11-23
+  notes: Needs a free account. Commercial entities need a corporate license and public-sector bodies a public-sector license. Raw data may not be redistributed; only transformative outputs may be published.
+
+- id: gdelt
+  name: GDELT Project
+  url: https://www.gdeltproject.org/
+  description: Machine-coded global news events, including protests and armed conflict, geolocated and updated every 15 minutes, with history from 1979.
+  section: conflict-security
+  publisher: The GDELT Project
+  publisher_type: nonprofit
+  coverage: [Global]
+  access: public
+  license:
+    name: Unrestricted use with citation
+    url: https://www.gdeltproject.org/about.html
+    status: open
+  interfaces: [Download, Bulk cloud, API]
+  formats: [CSV, JSON]
+  realtime: true
+  update_frequency: 15 minutes
+  added: 2026-11-23
+  last_verified: 2026-11-23
+  notes: Events are coded automatically from news reports and include duplicates and miscoding. Corroborate before drawing conclusions. The full history is in Google BigQuery.
+
+- id: views-forecasts
+  name: VIEWS Conflict Forecasts
+  url: https://viewsforecasting.org/
+  description: Monthly machine-learning forecasts of conflict fatalities up to three years ahead, by country and by 0.5° grid cell.
+  section: conflict-security
+  publisher: VIEWS (Uppsala University and PRIO)
+  publisher_type: academic
+  coverage: [Global]
+  access: public
+  license:
+    name: No data license stated
+    url: https://api.viewsforecasting.org/
+    status: unclear
+  interfaces: [API]
+  formats: [JSON, CSV]
+  realtime: false
+  update_frequency: monthly
+  added: 2026-11-23
+  last_verified: 2026-11-23
+  notes: Country forecasts are global; grid-cell forecasts cover Africa and the Middle East. The code is MIT-licensed, but no license is stated for the forecast data.

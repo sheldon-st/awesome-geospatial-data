@@ -29,6 +29,7 @@ Each entry ends with tags in this order:
 - [Air Quality and Environment](#air-quality-and-environment)
 - [Weather and Climate](#weather-and-climate)
 - [Natural Hazards](#natural-hazards)
+- [Conflict and Security](#conflict-and-security)
 - [Water and Oceans](#water-and-oceans)
 - [Transport and Mobility](#transport-and-mobility)
 - [Aviation, Maritime and Space](#aviation-maritime-and-space)
@@ -120,6 +121,16 @@ Earthquakes, wildfires, tropical cyclones, floods and multi-hazard alerting.
 - [NIFC Wildland Fire Open Data](https://data-nifc.opendata.arcgis.com/) - Current U.S. wildfire incident locations and perimeters from interagency fire reporting, plus historical perimeters. (`USA` `⚡` `ArcGIS REST` `Download` `GeoJSON` `CSV` `Shapefile` `KML` `Public domain`)
 - [NOAA National Hurricane Center GIS Data](https://www.nhc.noaa.gov/gis/) - Active tropical cyclone positions, forecast cones, tracks, wind fields and storm surge for the Atlantic and eastern Pacific. (`Americas` `Download` `API` `ArcGIS REST` `Shapefile` `KML` `JSON` `Public domain`)
 - [USGS Earthquake Feeds](https://earthquake.usgs.gov/earthquakes/feed/v1.0/geojson.php) - Worldwide earthquake events with magnitudes and revisions, refreshed every minute. (`Global` `⚡` `API` `GeoJSON` `CSV` `KML` `QuakeML` `Public domain`)
+
+## Conflict and Security
+
+Georeferenced conflict and political violence events, and conflict forecasts.
+
+- [ACLED](https://acleddata.com/) - Dated, geocoded political violence and protest events worldwide, with actors, event types and reported fatalities. (`Global` `🔑` `API` `Download` `CSV` `JSON` `ACLED EULA, non-commercial only` `⚠️`)
+- [GDELT Project](https://www.gdeltproject.org/) - Machine-coded global news events, including protests and armed conflict, geolocated and updated every 15 minutes, with history from 1979. (`Global` `⚡` `Download` `Bulk cloud` `API` `CSV` `JSON` `Unrestricted use with citation`)
+- [GeoConfirmed](https://geoconfirmed.org/scalar/v1) - Volunteer-verified geolocations of conflict photos and videos from Ukraine, Israel and Gaza, Sudan, Myanmar and other conflicts. (`Global` `API` `Download` `GeoJSON` `KML` `CSV` `No license stated` `⚠️`)
+- [UCDP Georeferenced Event Dataset (GED)](https://ucdp.uu.se/downloads/) - Geocoded events of organized violence worldwide from 1989, with actors, dates and fatality estimates, plus monthly candidate updates. (`Global` `Download` `API` `CSV` `JSON` `CC BY 4.0`)
+- [VIEWS Conflict Forecasts](https://viewsforecasting.org/) - Monthly machine-learning forecasts of conflict fatalities up to three years ahead, by country and by 0.5° grid cell. (`Global` `API` `JSON` `CSV` `No data license stated` `⚠️`)
 
 ## Water and Oceans
 

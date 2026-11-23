@@ -34,6 +34,9 @@
 - id: natural-hazards
   title: Natural Hazards
   description: Earthquakes, wildfires, tropical cyclones, floods and multi-hazard alerting.
+- id: conflict-security
+  title: Conflict and Security
+  description: Georeferenced conflict and political violence events, and conflict forecasts.
 - id: water-oceans
   title: Water and Oceans
   description: River gauges, tides, buoys, hydrography and marine data.

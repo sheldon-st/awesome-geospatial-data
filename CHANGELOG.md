@@ -37,6 +37,7 @@ Additions, removals and structural changes, grouped by batch. Dates are UTC.
   - Live aircraft tracking: adsb.lol, adsb.fi Open Data API, airplanes.live API.
   - Aviation reference: FAA Releasable Aircraft Database, OurAirports.
   - Vessel tracking: MarineCadastre AIS Vessel Traffic, Global Fishing Watch API.
+- Conflict and Security section, with 5 global sources: UCDP Georeferenced Event Dataset, ACLED, GDELT Project, VIEWS Conflict Forecasts and GeoConfirmed. Every link and license was re-checked on 2026-11-23.
 
 ### Changed
 

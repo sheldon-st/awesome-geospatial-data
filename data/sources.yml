@@ -354,7 +354,7 @@
   update_frequency: varies by product
   added: 2026-11-22
   last_verified: 2026-11-22
-  notes: CC BY 4.0 confirmed for Human Activities. Check each thematic portal's terms before reuse.
+  notes: CC BY 4.0 confirmed for Human Activities, which also publishes AIS-derived vessel density maps. Check each thematic portal's terms before reuse.
 
 # --- Elevation and bathymetry ------------------------------------------------
 
@@ -905,3 +905,151 @@
   added: 2026-11-23
   last_verified: 2026-11-23
   notes: Elements come from U.S. Space Force tracking. Cache downloads, since groups update only a few times a day.
+
+# --- Batch 4: ADS-B and AIS (2026-11-23) ------------------------------------
+
+- id: adsb-lol
+  name: adsb.lol
+  url: https://www.adsb.lol/docs/open-data/api/
+  description: Live aircraft positions worldwide from a community ADS-B and MLAT receiver network, plus daily historical trace archives.
+  section: aviation-maritime-space
+  publisher: adsb.lol
+  publisher_type: community
+  coverage: [Global]
+  access: public
+  license:
+    name: ODbL
+    url: https://www.adsb.lol/docs/open-data/api/
+    status: open
+  interfaces: [API, Download]
+  formats: [JSON]
+  realtime: true
+  update_frequency: seconds
+  added: 2026-11-23
+  last_verified: 2026-11-23
+  notes: No key is needed for 500 requests a day per IP. A free key raises the limit. Historical traces are published as GitHub releases, for example adsblol/globe_history_2025.
+
+- id: adsb-fi
+  name: adsb.fi Open Data API
+  url: https://github.com/adsbfi/opendata
+  description: Live aircraft positions worldwide from the adsb.fi receiver network, queryable by area, ICAO hex code, callsign, registration or squawk.
+  section: aviation-maritime-space
+  publisher: adsb.fi
+  publisher_type: community
+  coverage: [Global]
+  access: public
+  license:
+    name: Personal, non-commercial use only
+    url: https://github.com/adsbfi/opendata#terms
+    status: restricted
+  interfaces: [API]
+  formats: [JSON]
+  realtime: true
+  update_frequency: seconds
+  added: 2026-11-23
+  last_verified: 2026-11-23
+  notes: Public endpoints are limited to 1 request per second. The full-snapshot endpoint is for feeders. Commercial use needs an agreement with adsb.fi.
+
+- id: airplanes-live
+  name: airplanes.live API
+  url: https://airplanes.live/api-guide/
+  description: Free REST API of live aircraft positions from a worldwide community ADS-B feeder network.
+  section: aviation-maritime-space
+  publisher: airplanes.live
+  publisher_type: community
+  coverage: [Global]
+  access: public
+  license:
+    name: Non-commercial use only
+    url: https://airplanes.live/api-guide/
+    status: restricted
+  interfaces: [API]
+  formats: [JSON]
+  realtime: true
+  update_frequency: seconds
+  added: 2026-11-23
+  last_verified: 2026-11-23
+  notes: Limited to 1 request per second with no uptime guarantee. No key or feeder is required today, but the provider says that may change.
+
+- id: faa-aircraft-registry
+  name: FAA Releasable Aircraft Database
+  url: https://www.faa.gov/licenses_certificates/aircraft_certification/aircraft_registry/releasable_aircraft_download
+  description: Every U.S.-registered civil aircraft with owner, make, model and Mode S hex code, published as a daily download.
+  section: aviation-maritime-space
+  publisher: Federal Aviation Administration
+  publisher_type: government
+  coverage: [USA]
+  access: public
+  license:
+    name: Public domain
+    status: open
+  interfaces: [Download]
+  formats: [CSV]
+  realtime: false
+  update_frequency: daily
+  added: 2026-11-23
+  last_verified: 2026-11-23
+  notes: Join to ADS-B data on the Mode S hex code to label aircraft. Owner names of private aircraft are personal data, so handle them with care.
+
+- id: ourairports
+  name: OurAirports
+  url: https://ourairports.com/data/
+  description: Worldwide airports, runways, radio frequencies and navigational aids as CSV files, refreshed nightly.
+  section: aviation-maritime-space
+  publisher: OurAirports
+  publisher_type: community
+  coverage: [Global]
+  access: public
+  license:
+    name: Public domain
+    url: https://ourairports.com/data/
+    status: open
+  interfaces: [Download]
+  formats: [CSV]
+  realtime: false
+  update_frequency: nightly
+  added: 2026-11-23
+  last_verified: 2026-11-23
+  notes: A daily mirror of the CSV files is at https://github.com/davidmegginson/ourairports-data.
+
+- id: marinecadastre-ais
+  name: MarineCadastre AIS Vessel Traffic
+  url: https://marinecadastre.gov/ais/
+  description: Historical AIS vessel positions in U.S. coastal and offshore waters from 2009 onward, with speed, heading and vessel type.
+  section: aviation-maritime-space
+  publisher: NOAA Office for Coastal Management and BOEM
+  publisher_type: government
+  coverage: [USA]
+  access: public
+  license:
+    name: Public domain
+    url: https://www.fisheries.noaa.gov/inport/item/77594
+    status: open
+  interfaces: [Download]
+  formats: [CSV, GeoParquet]
+  realtime: false
+  update_frequency: annual releases
+  added: 2026-11-23
+  last_verified: 2026-11-23
+  notes: Recent years are GeoParquet; earlier years are CSV or file geodatabase. AIS does not capture every vessel, and the data is not for navigation.
+
+- id: global-fishing-watch-api
+  name: Global Fishing Watch API
+  url: https://globalfishingwatch.org/our-apis/
+  description: AIS-derived vessel presence, apparent fishing effort, port visits and encounters worldwide, plus vessel identity search.
+  section: aviation-maritime-space
+  publisher: Global Fishing Watch
+  publisher_type: nonprofit
+  coverage: [Global]
+  access: free-key
+  license:
+    name: CC BY-NC 4.0
+    url: https://globalfishingwatch.org/our-apis/documentation/docs/license-rate-limits
+    status: restricted
+  interfaces: [API]
+  formats: [JSON, CSV, GeoTIFF]
+  realtime: false
+  update_frequency: daily
+  added: 2026-11-23
+  last_verified: 2026-11-23
+  notes: Non-commercial use only, which excludes integration into commercial products. Credit "Powered by Global Fishing Watch" with a link.

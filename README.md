@@ -143,8 +143,15 @@ Public transit, shared mobility, roads and traffic.
 
 Aircraft and vessel tracking, launches, satellites and ground stations.
 
+- [adsb.fi Open Data API](https://github.com/adsbfi/opendata) - Live aircraft positions worldwide from the adsb.fi receiver network, queryable by area, ICAO hex code, callsign, registration or squawk. (`Global` `⚡` `API` `JSON` `Personal, non-commercial use only` `⚠️`)
+- [adsb.lol](https://www.adsb.lol/docs/open-data/api/) - Live aircraft positions worldwide from a community ADS-B and MLAT receiver network, plus daily historical trace archives. (`Global` `⚡` `API` `Download` `JSON` `ODbL`)
+- [airplanes.live API](https://airplanes.live/api-guide/) - Free REST API of live aircraft positions from a worldwide community ADS-B feeder network. (`Global` `⚡` `API` `JSON` `Non-commercial use only` `⚠️`)
 - [AISStream](https://aisstream.io/) - Free WebSocket stream of global AIS vessel positions and static ship data, filterable by bounding box. (`Global` `⚡` `🔑` `Stream` `JSON` `No reuse license stated` `⚠️`)
 - [CelesTrak](https://celestrak.org/NORAD/documentation/gp-data-formats.php) - Current orbital elements for active satellites and tracked debris, grouped by mission type, for orbit propagation and pass prediction. (`Global` `API` `Download` `JSON` `CSV` `XML` `Text` `No reuse license stated` `⚠️`)
+- [FAA Releasable Aircraft Database](https://www.faa.gov/licenses_certificates/aircraft_certification/aircraft_registry/releasable_aircraft_download) - Every U.S.-registered civil aircraft with owner, make, model and Mode S hex code, published as a daily download. (`USA` `Download` `CSV` `Public domain`)
+- [Global Fishing Watch API](https://globalfishingwatch.org/our-apis/) - AIS-derived vessel presence, apparent fishing effort, port visits and encounters worldwide, plus vessel identity search. (`Global` `🔑` `API` `JSON` `CSV` `GeoTIFF` `CC BY-NC 4.0` `⚠️`)
+- [MarineCadastre AIS Vessel Traffic](https://marinecadastre.gov/ais/) - Historical AIS vessel positions in U.S. coastal and offshore waters from 2009 onward, with speed, heading and vessel type. (`USA` `Download` `CSV` `GeoParquet` `Public domain`)
+- [OurAirports](https://ourairports.com/data/) - Worldwide airports, runways, radio frequencies and navigational aids as CSV files, refreshed nightly. (`Global` `Download` `CSV` `Public domain`)
 
 ## Related Lists
 

@@ -75,10 +75,12 @@ Building footprints, energy, utilities and other built assets.
 
 Satellite, aerial and weather-satellite imagery, plus the catalogs that serve them.
 
+- [Copernicus Data Space Ecosystem](https://dataspace.copernicus.eu/) - Official access to the full Sentinel archive and other Copernicus data, with STAC and OData search, openEO processing and downloads. (`Global` `🔑` `STAC` `API` `Download` `WMS` `JPEG 2000` `COG` `NetCDF` `Copernicus Sentinel data legal notice`)
 - [Earth Search](https://element84.com/earth-search/) - Public STAC API for cloud-optimized Sentinel-2, Landsat, Sentinel-1 and Copernicus DEM data hosted on AWS. (`Global` `STAC` `Bulk cloud` `COG` `Varies by collection`)
 - [Microsoft Planetary Computer](https://planetarycomputer.microsoft.com/catalog) - Petabyte-scale STAC catalog of Earth observation data, including Landsat, Sentinel, NAIP aerial imagery and land cover. (`Global` `STAC` `API` `Tiles` `COG` `Zarr` `GeoParquet` `NetCDF` `Varies by collection`)
 - [NASA Global Imagery Browse Services (GIBS)](https://nasa-gibs.github.io/gibs-api-docs/) - More than 1,000 global satellite imagery layers from MODIS, VIIRS and other instruments, served as map tiles. (`Global` `WMTS` `WMS` `Tiles` `PNG` `JPEG` `Public domain`)
 - [NOAA Emergency Response Imagery](https://storms.ngs.noaa.gov/) - High-resolution aerial imagery flown after U.S. hurricanes and other disasters, often within days of the event. (`USA` `Tiles` `Download` `JPEG` `GeoTIFF` `Public domain`)
+- [NOAA GOES on AWS](https://registry.opendata.aws/noaa-goes/) - Full-disk and regional imagery and derived products from the GOES geostationary weather satellites, every 1 to 10 minutes. (`Americas` `⚡` `Bulk cloud` `NetCDF` `Public domain`)
 
 ## Elevation and Bathymetry
 
@@ -92,13 +94,18 @@ Terrain models, hillshades, lidar and seafloor depth.
 
 Land cover, vegetation, forests and species occurrence.
 
+- [Annual National Land Cover Database (Annual NLCD)](https://www.usgs.gov/centers/eros/science/annual-national-land-cover-database) - Annual 30 m land cover, impervious surface and change maps for the conterminous United States from 1985 onward. (`USA` `Download` `WMS` `COG` `Public domain`)
+- [Dynamic World](https://developers.google.com/earth-engine/datasets/catalog/GOOGLE_DYNAMICWORLD_V1) - Near-real-time global 10 m land use and land cover, with class probabilities for every Sentinel-2 scene since 2015. (`Global` `🔑` `API` `GeoTIFF` `CC BY 4.0`)
 - [ESA WorldCover](https://esa-worldcover.org/) - Global land cover maps at 10 m resolution for 2020 and 2021, with 11 classes derived from Sentinel-1 and Sentinel-2. (`Global` `Download` `Bulk cloud` `COG` `CC BY 4.0`)
 - [GBIF](https://techdocs.gbif.org/en/openapi/) - Billions of species occurrence records from museums, surveys and citizen science, searchable by taxon, place and time. (`Global` `API` `Download` `Bulk cloud` `CSV` `JSON` `Parquet` `CC0 / CC BY / CC BY-NC (per dataset)` `⚠️`)
+- [USDA Cropland Data Layer](https://www.nass.usda.gov/Research_and_Science/Cropland/SARS1a.php) - Annual crop-specific land cover for the United States, identifying the crop grown in each pixel. (`USA` `Download` `WMS` `GeoTIFF` `Public domain`)
 
 ## Air Quality and Environment
 
 Air pollution observations and other environmental monitoring.
 
+- [Copernicus Atmosphere Monitoring Service (CAMS)](https://ads.atmosphere.copernicus.eu/datasets/cams-global-atmospheric-composition-forecasts) - Global forecasts and reanalysis of aerosols, ozone, wildfire smoke, dust and other atmospheric pollutants. (`Global` `🔑` `API` `GRIB` `NetCDF` `CC BY 4.0`)
+- [EPA AirNow API](https://docs.airnowapi.org/) - Current and forecast Air Quality Index and pollutant observations for U.S. reporting areas and monitoring sites. (`USA` `⚡` `🔑` `API` `Download` `JSON` `CSV` `XML` `KML` `AirNow data use guidelines`)
 - [OpenAQ](https://docs.openaq.org/) - Air quality measurements from government monitors and research sensors worldwide, harmonized into one API. (`Global` `⚡` `🔑` `API` `Bulk cloud` `JSON` `CSV` `Varies by provider` `⚠️`)
 
 ## Weather and Climate
@@ -107,6 +114,7 @@ Observations, forecasts, warnings and climate reanalysis.
 
 - [Aviation Weather Center Data API](https://aviationweather.gov/data/api/) - Worldwide METAR and TAF reports plus SIGMETs, AIRMETs, pilot reports and other aviation advisories. (`Global` `⚡` `API` `JSON` `GeoJSON` `XML` `CSV` `Public domain`)
 - [ERA5](https://cds.climate.copernicus.eu/datasets/reanalysis-era5-single-levels) - Hourly global reanalysis of atmosphere, land and ocean climate variables at about 31 km resolution, from 1940 to near present. (`Global` `🔑` `API` `GRIB` `NetCDF` `CC BY 4.0`)
+- [Global Historical Climatology Network Daily (GHCN-Daily)](https://www.ncei.noaa.gov/products/land-based-station/global-historical-climatology-network-daily) - Daily temperature, precipitation and snow observations from more than 100,000 stations worldwide, some going back over 175 years. (`Global` `API` `Download` `Bulk cloud` `CSV` `JSON` `CC0`)
 - [MET Norway Weather API](https://api.met.no/) - Global point forecasts, Nordic nowcasts and official Norwegian weather warnings from the Norwegian Meteorological Institute. (`Global` `⚡` `API` `CAP` `GeoJSON` `JSON` `XML` `CC BY 4.0 / NLOD 2.0`)
 - [National Weather Service API](https://www.weather.gov/documentation/services-web-api) - U.S. point and gridded forecasts, station observations, and active watches and warnings with their polygons. (`USA` `⚡` `API` `CAP` `GeoJSON` `JSON` `XML` `Public domain`)
 
@@ -120,6 +128,7 @@ Earthquakes, wildfires, tropical cyclones, floods and multi-hazard alerting.
 - [NASA FIRMS Active Fire Data](https://firms.modaps.eosdis.nasa.gov/active_fire/) - Global satellite thermal hotspot detections from MODIS and VIIRS, published within hours of each overpass. (`Global` `⚡` `Download` `CSV` `Shapefile` `KML` `Public domain`)
 - [NIFC Wildland Fire Open Data](https://data-nifc.opendata.arcgis.com/) - Current U.S. wildfire incident locations and perimeters from interagency fire reporting, plus historical perimeters. (`USA` `⚡` `ArcGIS REST` `Download` `GeoJSON` `CSV` `Shapefile` `KML` `Public domain`)
 - [NOAA National Hurricane Center GIS Data](https://www.nhc.noaa.gov/gis/) - Active tropical cyclone positions, forecast cones, tracks, wind fields and storm surge for the Atlantic and eastern Pacific. (`Americas` `Download` `API` `ArcGIS REST` `Shapefile` `KML` `JSON` `Public domain`)
+- [U.S. Drought Monitor](https://droughtmonitor.unl.edu/DmData/GISData.aspx) - Weekly maps of drought severity across the United States, from abnormally dry to exceptional drought, with an archive from 2000. (`USA` `Download` `API` `Shapefile` `GeoJSON` `KML` `Free use with credit`)
 - [USGS Earthquake Feeds](https://earthquake.usgs.gov/earthquakes/feed/v1.0/geojson.php) - Worldwide earthquake events with magnitudes and revisions, refreshed every minute. (`Global` `⚡` `API` `GeoJSON` `CSV` `KML` `QuakeML` `Public domain`)
 
 ## Conflict and Security
@@ -149,6 +158,7 @@ Public transit, shared mobility, roads and traffic.
 
 - [Digitraffic](https://www.digitraffic.fi/en/) - Real-time Finnish road, rail and marine traffic data, including AIS vessel positions, train locations and road weather. (`FIN` `⚡` `API` `Stream` `JSON` `GeoJSON` `CC BY 4.0`)
 - [Mobility Database](https://mobilitydatabase.org/) - Catalog of thousands of GTFS, GTFS Realtime and GBFS feeds worldwide, with validation reports and download links. (`Global` `API` `Download` `GTFS` `GTFS-RT` `GBFS` `CSV` `JSON` `Protobuf` `CC0 (catalog), feeds vary`)
+- [National Transportation Atlas Database (NTAD)](https://geodata.bts.gov/) - U.S. transportation networks and facilities, including roads, rail, ports, airports, waterways and transit stops. (`USA` `ArcGIS REST` `Download` `GeoJSON` `CSV` `Shapefile` `KML` `Varies by layer`)
 
 ## Aviation, Maritime and Space
 

@@ -38,6 +38,14 @@ Additions, removals and structural changes, grouped by batch. Dates are UTC.
   - Aviation reference: FAA Releasable Aircraft Database, OurAirports.
   - Vessel tracking: MarineCadastre AIS Vessel Traffic, Global Fishing Watch API.
 - Conflict and Security section, with 5 global sources: UCDP Georeferenced Event Dataset, ACLED, GDELT Project, VIEWS Conflict Forecasts and GeoConfirmed. Every link and license was re-checked on 2026-11-23.
+- Sixth batch: 10 global and U.S. sources that fill thin sections. Every link and license was re-checked on 2026-11-23.
+  - Imagery: NOAA GOES on AWS, Copernicus Data Space Ecosystem.
+  - Land cover: Dynamic World, Annual NLCD, USDA Cropland Data Layer.
+  - Air quality: EPA AirNow API, Copernicus Atmosphere Monitoring Service (CAMS).
+  - Transport: National Transportation Atlas Database (NTAD).
+  - Weather and climate: GHCN-Daily.
+  - Natural hazards: U.S. Drought Monitor.
+- `JPEG 2000` format value, for Sentinel-2 SAFE products.
 
 ### Changed
 

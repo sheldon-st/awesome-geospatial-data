@@ -1160,3 +1160,215 @@
   added: 2026-11-23
   last_verified: 2026-11-23
   notes: Public read endpoints need no key; send a descriptive User-Agent. The API docs say the data is free for research, journalism and analysis, but no license is stated. Each placemark links to its source footage, which keeps its own rights.
+
+# --- Batch 6: gap fill, global and US (2026-11-23) --------------------------
+
+- id: noaa-goes-aws
+  name: NOAA GOES on AWS
+  url: https://registry.opendata.aws/noaa-goes/
+  description: Full-disk and regional imagery and derived products from the GOES geostationary weather satellites, every 1 to 10 minutes.
+  section: imagery
+  publisher: NOAA Open Data Dissemination Program
+  publisher_type: government
+  coverage: [Americas]
+  access: public
+  license:
+    name: Public domain
+    url: https://registry.opendata.aws/noaa-goes/
+    status: open
+  interfaces: [Bulk cloud]
+  formats: [NetCDF]
+  realtime: true
+  update_frequency: 1 to 10 minutes
+  added: 2026-11-23
+  last_verified: 2026-11-23
+  notes: Read directly from public S3 buckets (noaa-goes18, noaa-goes19) with no AWS account. Bucket notifications are available for new files.
+
+- id: copernicus-data-space
+  name: Copernicus Data Space Ecosystem
+  url: https://dataspace.copernicus.eu/
+  description: Official access to the full Sentinel archive and other Copernicus data, with STAC and OData search, openEO processing and downloads.
+  section: imagery
+  publisher: European Space Agency and European Commission
+  publisher_type: intergovernmental
+  coverage: [Global]
+  access: free-key
+  license:
+    name: Copernicus Sentinel data legal notice
+    url: https://dataspace.copernicus.eu/terms-and-conditions
+    status: open
+  interfaces: [STAC, API, Download, WMS]
+  formats: [JPEG 2000, COG, NetCDF]
+  realtime: false
+  update_frequency: as new scenes are published
+  added: 2026-11-23
+  last_verified: 2026-11-23
+  notes: Sentinel data is free, full and open. Downloads and processing need a free account; catalog search does not.
+
+- id: dynamic-world
+  name: Dynamic World
+  url: https://developers.google.com/earth-engine/datasets/catalog/GOOGLE_DYNAMICWORLD_V1
+  description: Near-real-time global 10 m land use and land cover, with class probabilities for every Sentinel-2 scene since 2015.
+  section: land-cover-biodiversity
+  publisher: Google and World Resources Institute
+  publisher_type: commercial
+  coverage: [Global]
+  access: free-key
+  license:
+    name: CC BY 4.0
+    url: https://developers.google.com/earth-engine/datasets/catalog/GOOGLE_DYNAMICWORLD_V1
+    status: open
+  interfaces: [API]
+  formats: [GeoTIFF]
+  realtime: false
+  update_frequency: every Sentinel-2 pass, typically 2 to 5 days
+  added: 2026-11-23
+  last_verified: 2026-11-23
+  notes: Accessed through Google Earth Engine, which needs a free account for non-commercial use. Credit the Dynamic World Project and the modified Copernicus Sentinel data as stated in the terms.
+
+- id: annual-nlcd
+  name: Annual National Land Cover Database (Annual NLCD)
+  url: https://www.usgs.gov/centers/eros/science/annual-national-land-cover-database
+  description: Annual 30 m land cover, impervious surface and change maps for the conterminous United States from 1985 onward.
+  section: land-cover-biodiversity
+  publisher: U.S. Geological Survey
+  publisher_type: government
+  coverage: [USA]
+  access: public
+  license:
+    name: Public domain
+    url: https://www.usgs.gov/information-policies-and-instructions/copyrights-and-credits
+    status: open
+  interfaces: [Download, WMS]
+  formats: [COG]
+  realtime: false
+  update_frequency: annual
+  added: 2026-11-23
+  last_verified: 2026-11-23
+  notes: Collection 1.2 was released in June 2026. Downloads and map services are on https://www.mrlc.gov/data.
+
+- id: cropland-data-layer
+  name: USDA Cropland Data Layer
+  url: https://www.nass.usda.gov/Research_and_Science/Cropland/SARS1a.php
+  description: Annual crop-specific land cover for the United States, identifying the crop grown in each pixel.
+  section: land-cover-biodiversity
+  publisher: USDA National Agricultural Statistics Service
+  publisher_type: government
+  coverage: [USA]
+  access: public
+  license:
+    name: Public domain
+    url: https://www.nass.usda.gov/Research_and_Science/Cropland/sarsfaqs2.php
+    status: open
+  interfaces: [Download, WMS]
+  formats: [GeoTIFF]
+  realtime: false
+  update_frequency: annual
+  added: 2026-11-23
+  last_verified: 2026-11-23
+  notes: Browse and download through CroplandCROS. Accuracy is typically 85 to 95 percent for major crops and lower for minor ones.
+
+- id: airnow-api
+  name: EPA AirNow API
+  url: https://docs.airnowapi.org/
+  description: Current and forecast Air Quality Index and pollutant observations for U.S. reporting areas and monitoring sites.
+  section: air-quality
+  publisher: U.S. Environmental Protection Agency
+  publisher_type: government
+  coverage: [USA]
+  access: free-key
+  license:
+    name: AirNow data use guidelines
+    url: https://docs.airnowapi.org/docs/DataUseGuidelines.pdf
+    status: open
+  interfaces: [API, Download]
+  formats: [JSON, CSV, XML, KML]
+  realtime: true
+  update_frequency: hourly
+  added: 2026-11-23
+  last_verified: 2026-11-23
+  notes: Observations are preliminary and unvalidated. The guidelines say to credit the reporting agencies, label displays as preliminary, and not use the data for regulation or trend analysis (use EPA AQS for that).
+
+- id: cams
+  name: Copernicus Atmosphere Monitoring Service (CAMS)
+  url: https://ads.atmosphere.copernicus.eu/datasets/cams-global-atmospheric-composition-forecasts
+  description: Global forecasts and reanalysis of aerosols, ozone, wildfire smoke, dust and other atmospheric pollutants.
+  section: air-quality
+  publisher: ECMWF / Copernicus Atmosphere Monitoring Service
+  publisher_type: intergovernmental
+  coverage: [Global]
+  access: free-key
+  license:
+    name: CC BY 4.0
+    url: https://ads.atmosphere.copernicus.eu/datasets/cams-global-atmospheric-composition-forecasts
+    status: open
+  interfaces: [API]
+  formats: [GRIB, NetCDF]
+  realtime: false
+  update_frequency: forecasts twice daily
+  added: 2026-11-23
+  last_verified: 2026-11-23
+  notes: Retrieved through the Atmosphere Data Store API with a free account. Model output, not ground observations.
+
+- id: bts-ntad
+  name: National Transportation Atlas Database (NTAD)
+  url: https://geodata.bts.gov/
+  description: U.S. transportation networks and facilities, including roads, rail, ports, airports, waterways and transit stops.
+  section: transport
+  publisher: Bureau of Transportation Statistics
+  publisher_type: government
+  coverage: [USA]
+  access: public
+  license:
+    name: Varies by layer
+    url: https://geodata.bts.gov/
+    status: open
+  interfaces: [ArcGIS REST, Download]
+  formats: [GeoJSON, CSV, Shapefile, KML]
+  realtime: false
+  update_frequency: varies by layer
+  added: 2026-11-23
+  last_verified: 2026-11-23
+  notes: Most layers are public domain. Some, such as the National Transit Map, are CC BY with credits to contributing agencies, so check each layer's metadata.
+
+- id: ghcn-daily
+  name: Global Historical Climatology Network Daily (GHCN-Daily)
+  url: https://www.ncei.noaa.gov/products/land-based-station/global-historical-climatology-network-daily
+  description: Daily temperature, precipitation and snow observations from more than 100,000 stations worldwide, some going back over 175 years.
+  section: weather-climate
+  publisher: NOAA National Centers for Environmental Information
+  publisher_type: government
+  coverage: [Global]
+  access: public
+  license:
+    name: CC0
+    url: https://registry.opendata.aws/noaa-ghcn/
+    status: open
+  interfaces: [API, Download, Bulk cloud]
+  formats: [CSV, JSON]
+  realtime: false
+  update_frequency: daily
+  added: 2026-11-23
+  last_verified: 2026-11-23
+  notes: The NCEI Access Data Service needs no token; the older Climate Data Online API does. Records are not homogenized, so check for station changes before trend analysis.
+
+- id: us-drought-monitor
+  name: U.S. Drought Monitor
+  url: https://droughtmonitor.unl.edu/DmData/GISData.aspx
+  description: Weekly maps of drought severity across the United States, from abnormally dry to exceptional drought, with an archive from 2000.
+  section: natural-hazards
+  publisher: National Drought Mitigation Center, USDA and NOAA
+  publisher_type: academic
+  coverage: [USA]
+  access: public
+  license:
+    name: Free use with credit
+    url: https://droughtmonitor.unl.edu/About/Permission.aspx
+    status: open
+  interfaces: [Download, API]
+  formats: [Shapefile, GeoJSON, KML]
+  realtime: false
+  update_frequency: weekly (Thursdays)
+  added: 2026-11-23
+  last_verified: 2026-11-23
+  notes: Commercial and non-commercial use are allowed with the credit line given on the permission page.

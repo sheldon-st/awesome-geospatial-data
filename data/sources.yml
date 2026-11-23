@@ -1139,3 +1139,24 @@
   added: 2026-11-23
   last_verified: 2026-11-23
   notes: Country forecasts are global; grid-cell forecasts cover Africa and the Middle East. The code is MIT-licensed, but no license is stated for the forecast data.
+
+- id: geoconfirmed
+  name: GeoConfirmed
+  url: https://geoconfirmed.org/scalar/v1
+  description: Volunteer-verified geolocations of conflict photos and videos from Ukraine, Israel and Gaza, Sudan, Myanmar and other conflicts.
+  section: conflict-security
+  publisher: GeoConfirmed
+  publisher_type: community
+  coverage: [Global]
+  access: public
+  license:
+    name: No license stated
+    url: https://geoconfirmed.org/scalar/v1
+    status: unclear
+  interfaces: [API, Download]
+  formats: [GeoJSON, KML, CSV]
+  realtime: false
+  update_frequency: continuous, as events are verified
+  added: 2026-11-23
+  last_verified: 2026-11-23
+  notes: Public read endpoints need no key; send a descriptive User-Agent. The API docs say the data is free for research, journalism and analysis, but no license is stated. Each placemark links to its source footage, which keeps its own rights.

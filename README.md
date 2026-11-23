@@ -128,6 +128,7 @@ Georeferenced conflict and political violence events, and conflict forecasts.
 
 - [ACLED](https://acleddata.com/) - Dated, geocoded political violence and protest events worldwide, with actors, event types and reported fatalities. (`Global` `🔑` `API` `Download` `CSV` `JSON` `ACLED EULA, non-commercial only` `⚠️`)
 - [GDELT Project](https://www.gdeltproject.org/) - Machine-coded global news events, including protests and armed conflict, geolocated and updated every 15 minutes, with history from 1979. (`Global` `⚡` `Download` `Bulk cloud` `API` `CSV` `JSON` `Unrestricted use with citation`)
+- [GeoConfirmed](https://geoconfirmed.org/scalar/v1) - Volunteer-verified geolocations of conflict photos and videos from Ukraine, Israel and Gaza, Sudan, Myanmar and other conflicts. (`Global` `API` `Download` `GeoJSON` `KML` `CSV` `No license stated` `⚠️`)
 - [UCDP Georeferenced Event Dataset (GED)](https://ucdp.uu.se/downloads/) - Geocoded events of organized violence worldwide from 1989, with actors, dates and fatality estimates, plus monthly candidate updates. (`Global` `Download` `API` `CSV` `JSON` `CC BY 4.0`)
 - [VIEWS Conflict Forecasts](https://viewsforecasting.org/) - Monthly machine-learning forecasts of conflict fatalities up to three years ahead, by country and by 0.5° grid cell. (`Global` `API` `JSON` `CSV` `No data license stated` `⚠️`)
 

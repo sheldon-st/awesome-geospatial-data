@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Awesome Geospatial Data</title>
+    <meta
+      name="description"
+      content="Search and filter publicly accessible geospatial datasets, APIs and live feeds by coverage, access, format and license."
+    />
+    <meta name="color-scheme" content="light dark" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%232f63d8' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='10'/%3E%3Cpath d='M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20'/%3E%3Cpath d='M2 12h20'/%3E%3C/svg%3E"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script>
+      // Apply the saved or system theme before first paint to avoid a flash.
+      (function () {
+        var saved = null;
+        try {
+          saved = localStorage.getItem('theme');
+        } catch (e) {}
+        var dark = saved ? saved === 'dark' : window.matchMedia('(prefers-color-scheme: dark)').matches;
+        if (dark) document.documentElement.classList.add('dark');
+      })();
+    </script>
+    <script type="module" src="app.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#results">Skip to results</a>
+
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="./">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="12" cy="12" r="10" />
+            <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20" />
+            <path d="M2 12h20" />
+          </svg>
+          <span>Awesome Geospatial Data</span>
+        </a>
+        <nav class="header-actions" aria-label="Site">
+          <a
+            class="btn btn-outline btn-sm hide-sm"
+            href="https://github.com/sheldon-st/awesome-geospatial-data/issues/new?template=suggest-source.yml"
+            >Suggest a source</a
+          >
+          <a
+            class="btn btn-ghost btn-icon"
+            href="https://github.com/sheldon-st/awesome-geospatial-data"
+            aria-label="GitHub repository"
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"
+              />
+              <path d="M9 18c-4.51 2-5-2-7-2" />
+            </svg>
+          </a>
+          <button class="btn btn-ghost btn-icon" id="theme-toggle" type="button" aria-label="Toggle dark mode">
+            <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true">
+              <circle cx="12" cy="12" r="4" />
+              <path d="M12 2v2M12 20v2m-7.07-14.07 1.41 1.41m11.32 11.32 1.41 1.41M2 12h2m16 0h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41" />
+            </svg>
+            <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" />
+            </svg>
+          </button>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="intro">
+        <h1>Awesome Geospatial Data</h1>
+        <p class="lede">
+          Publicly accessible geospatial datasets, APIs and live feeds. Every entry is free to use, can be fetched by a
+          program, and is tagged with coverage, access method, format and license.
+        </p>
+      </section>
+
+      <div class="toolbar">
+        <div class="search">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="m21 21-4.34-4.34" />
+            <circle cx="11" cy="11" r="8" />
+          </svg>
+          <input
+            id="q"
+            class="input"
+            type="search"
+            placeholder="Search sources, publishers, formats…"
+            aria-label="Search sources"
+            autocomplete="off"
+            spellcheck="false"
+          />
+          <kbd class="search-hint" aria-hidden="true">/</kbd>
+        </div>
+        <div class="toolbar-controls">
+          <label class="toggle">
+            <input id="live" type="checkbox" class="switch" />
+            <span>Live only</span>
+          </label>
+          <label class="sort">
+            <span class="sr-only">Sort by</span>
+            <select id="sort" class="select"></select>
+          </label>
+        </div>
+      </div>
+
+      <div class="layout">
+        <aside class="sidebar" aria-label="Filters">
+          <details class="filters" id="filters">
+            <summary class="btn btn-outline btn-sm">
+              Filters <span id="filter-count" class="badge badge-default" hidden></span>
+            </summary>
+            <div id="facets" class="facets"></div>
+          </details>
+        </aside>
+
+        <section class="results" id="results" aria-label="Sources">
+          <div class="results-head">
+            <p id="count" aria-live="polite">Loading sources…</p>
+            <button id="clear" class="btn btn-ghost btn-sm" type="button" hidden>Clear filters</button>
+          </div>
+          <div id="list" class="source-grid"></div>
+          <div id="empty" class="empty" hidden>
+            <p><strong>No sources match.</strong> Try a different search or remove a filter.</p>
+            <button id="empty-clear" class="btn btn-outline btn-sm" type="button">Clear filters</button>
+          </div>
+          <noscript>
+            <p class="load-error">
+              This page needs JavaScript. You can
+              <a href="https://github.com/sheldon-st/awesome-geospatial-data#readme">read the list on GitHub</a>
+              instead.
+            </p>
+          </noscript>
+        </section>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>
+          Many of these sources also power <a href="https://opengeo.space">OpenGeo</a>, a web-based geospatial client for
+          exploring live and reference data. This list is maintained independently of the data publishers. Being listed is
+          not an endorsement, and each source's own terms apply.
+        </p>
+        <p>
+          <a href="https://github.com/sheldon-st/awesome-geospatial-data/blob/main/contributing.md">Contribute</a> ·
+          <a href="https://github.com/sheldon-st/awesome-geospatial-data/blob/main/data/sources.yml">Source data</a> ·
+          List content is <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0</a>
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

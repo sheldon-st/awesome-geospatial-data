@@ -28,6 +28,8 @@ One entry per product family, not per layer or file. For example, list a provide
 3. Run `pnpm verify` to run the tests, the README freshness check and `awesome-lint`.
 4. Commit both `data/sources.yml` and `README.md`, and add a line to [`CHANGELOG.md`](CHANGELOG.md) under *Unreleased*.
 
+The [website](https://sheldon-st.github.io/awesome-geospatial-data/) is rebuilt from `data/sources.yml` on every merge to `main`, so it needs no separate edit. To preview it locally, run `pnpm site` and serve `_site/`, for example with `pnpm dlx serve _site`.
+
 ### Fields
 
 | Field | Required | Notes |

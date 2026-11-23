@@ -33,3 +33,11 @@ Additions, removals and structural changes, grouped by batch. Dates are UTC.
   - Natural hazards: FEMA National Flood Hazard Layer.
   - Space: CelesTrak.
 - `GRIB` format value, for GRIB edition 1 data such as ERA5.
+- Fourth batch: 7 ADS-B, AIS and aviation reference sources. Every link and license was re-checked on 2026-11-23.
+  - Live aircraft tracking: adsb.lol, adsb.fi Open Data API, airplanes.live API.
+  - Aviation reference: FAA Releasable Aircraft Database, OurAirports.
+  - Vessel tracking: MarineCadastre AIS Vessel Traffic, Global Fishing Watch API.
+
+### Changed
+
+- EMODnet notes now mention its AIS-derived vessel density maps.

@@ -36,7 +36,7 @@
   description: Earthquakes, wildfires, tropical cyclones, floods and multi-hazard alerting.
 - id: conflict-security
   title: Conflict and Security
-  description: Georeferenced conflict and political violence events, and conflict forecasts.
+  description: Georeferenced conflict and political violence events, conflict forecasts and displacement figures.
 - id: water-oceans
   title: Water and Oceans
   description: River gauges, tides, buoys, hydrography and marine data.

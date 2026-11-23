@@ -1372,3 +1372,171 @@
   added: 2026-11-23
   last_verified: 2026-11-23
   notes: Commercial and non-commercial use are allowed with the credit line given on the permission page.
+
+# --- Batch 7: runners-up, global and US (2026-11-23) ------------------------
+
+- id: nasa-tempo
+  name: NASA TEMPO
+  url: https://www.earthdata.nasa.gov/data/instruments/tempo
+  description: Hourly daytime satellite measurements of nitrogen dioxide, formaldehyde, ozone and aerosols over North America from geostationary orbit.
+  section: air-quality
+  publisher: NASA and Smithsonian Astrophysical Observatory
+  publisher_type: government
+  coverage: [Americas]
+  access: free-key
+  license:
+    name: Public domain
+    url: https://www.earthdata.nasa.gov/engage/open-data-services-software-policies/data-use-guidance
+    status: open
+  interfaces: [Download, API]
+  formats: [NetCDF]
+  realtime: true
+  update_frequency: hourly during daylight, near-real-time products within hours
+  added: 2026-11-23
+  last_verified: 2026-11-23
+  notes: Downloads need a free NASA Earthdata Login. These are column measurements from space, not ground-level concentrations.
+
+- id: noaa-spc-outlooks
+  name: NOAA Storm Prediction Center GIS Data
+  url: https://www.spc.noaa.gov/gis/
+  description: U.S. severe thunderstorm, tornado, hail, wind and fire weather outlooks for days 1 to 8, plus watches and storm reports.
+  section: weather-climate
+  publisher: NOAA NWS Storm Prediction Center
+  publisher_type: government
+  coverage: [USA]
+  access: public
+  license:
+    name: Public domain
+    url: https://www.weather.gov/disclaimer
+    status: open
+  interfaces: [Download]
+  formats: [GeoJSON, KML, Shapefile]
+  realtime: false
+  update_frequency: several times a day
+  added: 2026-11-23
+  last_verified: 2026-11-23
+
+- id: transitland
+  name: Transitland
+  url: https://www.transit.land/documentation
+  description: Global directory and API of transit operators, routes, stops and schedules aggregated from thousands of GTFS and GTFS Realtime feeds.
+  section: transport
+  publisher: Interline Technologies
+  publisher_type: commercial
+  coverage: [Global]
+  access: free-key
+  license:
+    name: Transitland terms; feeds vary
+    url: https://www.transit.land/terms
+    status: restricted
+  interfaces: [API, Tiles, GTFS, GTFS-RT]
+  formats: [JSON, GeoJSON, MVT]
+  realtime: false
+  update_frequency: continuous feed fetching
+  added: 2026-11-23
+  last_verified: 2026-11-23
+  notes: The free plan allows 10,000 REST queries a month and requires attribution linking to the Transitland terms. Bulk datasets are non-commercial only. Each source feed keeps its own license.
+
+- id: usfws-nwi
+  name: USFWS National Wetlands Inventory
+  url: https://www.fws.gov/program/national-wetlands-inventory/data-download
+  description: Mapped wetlands and deepwater habitats across the United States, classified by type, downloadable by state or watershed.
+  section: land-cover-biodiversity
+  publisher: U.S. Fish and Wildlife Service
+  publisher_type: government
+  coverage: [USA]
+  access: public
+  license:
+    name: Public domain
+    status: open
+  interfaces: [Download, ArcGIS REST, WMS]
+  formats: [Shapefile]
+  realtime: false
+  update_frequency: twice a year
+  added: 2026-11-23
+  last_verified: 2026-11-23
+  notes: Metadata lists no use limitations; acknowledgement of USFWS is appreciated. Wetland boundaries are not regulatory determinations.
+
+- id: cdc-places
+  name: CDC PLACES
+  url: https://data.cdc.gov/d/cwsq-ngmh
+  description: Model-based estimates of chronic disease, risk behaviors and health outcomes for U.S. counties, places, census tracts and ZIP code areas.
+  section: population
+  publisher: Centers for Disease Control and Prevention
+  publisher_type: government
+  coverage: [USA]
+  access: public
+  license:
+    name: Public domain
+    url: https://data.cdc.gov/d/cwsq-ngmh
+    status: open
+  interfaces: [API, Download]
+  formats: [CSV, JSON, GeoJSON]
+  realtime: false
+  update_frequency: annual releases
+  added: 2026-11-23
+  last_verified: 2026-11-23
+  notes: Estimates are modeled from survey data, not direct counts. Each geography level is a separate dataset on data.cdc.gov; join tracts to TIGERweb by GEOID.
+
+- id: launch-library-2
+  name: Launch Library 2
+  url: https://thespacedevs.com/llapi
+  description: Upcoming and past orbital launches worldwide, with launch pads, agencies, rockets, missions and live launch windows.
+  section: aviation-maritime-space
+  publisher: The Space Devs
+  publisher_type: community
+  coverage: [Global]
+  access: public
+  license:
+    name: Free use, attribution welcomed
+    url: https://github.com/TheSpaceDevs/Tutorials/blob/main/faqs/faq_TSD.md#terms-of-use
+    status: open
+  interfaces: [API]
+  formats: [JSON]
+  realtime: false
+  update_frequency: continuous as launch schedules change
+  added: 2026-11-23
+  last_verified: 2026-11-23
+  notes: Free without a key for 15 requests an hour; supporters get higher limits. The terms ask users not to forward the data without adding value.
+
+- id: unhcr-refugee-statistics-api
+  name: UNHCR Refugee Statistics API
+  url: https://api.unhcr.org/docs/refugee-statistics.html
+  description: Refugees, asylum-seekers, internally displaced and stateless people by country of origin and asylum, yearly from 1951.
+  section: conflict-security
+  publisher: UN Refugee Agency (UNHCR)
+  publisher_type: intergovernmental
+  coverage: [Global]
+  access: public
+  license:
+    name: CC BY 4.0
+    url: https://www.unhcr.org/terms-use-datasets
+    status: open
+  interfaces: [API, Download]
+  formats: [JSON, CSV]
+  realtime: false
+  update_frequency: annual, with mid-year updates
+  added: 2026-11-23
+  last_verified: 2026-11-23
+  notes: Country-level figures keyed by ISO codes. Credit "UNHCR Refugee Population Statistics Database". Some series come from other providers and need their consent to redistribute.
+
+- id: iom-dtm-api
+  name: IOM Displacement Tracking Matrix API
+  url: https://dtm.iom.int/data-and-analysis/dtm-api
+  description: Internally displaced population figures by country and first- and second-level administrative areas, from IOM field assessments.
+  section: conflict-security
+  publisher: International Organization for Migration (IOM)
+  publisher_type: intergovernmental
+  coverage: [Global]
+  access: free-key
+  license:
+    name: No data license stated
+    url: https://dtm.iom.int/data-and-analysis/dtm-api
+    status: unclear
+  interfaces: [API]
+  formats: [JSON]
+  realtime: false
+  update_frequency: per assessment round
+  added: 2026-11-23
+  last_verified: 2026-11-23
+  notes: Needs a free subscription key from the DTM API portal. Covers non-sensitive aggregate figures only. Python and R client packages are named dtmapi.

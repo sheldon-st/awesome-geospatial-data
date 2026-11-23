@@ -132,6 +132,14 @@ export function renderContents(markdown) {
     .join('\n');
 }
 
+/** Data published to the site as sources.json. Sections keep README order; sources carry every field. */
+export function siteData({ sections, sources }) {
+  return {
+    sections: sections.map(({ id, title, description }) => ({ id, title, description: description ?? '' })),
+    sources,
+  };
+}
+
 export function render(data, template = readFileSync(paths.template, 'utf8')) {
   const withSections = template.replace('<!-- sections -->', renderSections(data).trimEnd());
   return withSections.replace('<!-- contents -->', renderContents(withSections));

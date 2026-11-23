@@ -26,6 +26,8 @@ jobs:
         run: pnpm test
       - name: README is generated from data
         run: pnpm check
+      - name: Site builds
+        run: pnpm site
       - name: awesome-lint
         run: pnpm lint
         env:

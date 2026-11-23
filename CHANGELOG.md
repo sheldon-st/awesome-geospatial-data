@@ -6,6 +6,7 @@ Additions, removals and structural changes, grouped by batch. Dates are UTC.
 
 ### Added
 
+- Website for searching, filtering and sorting the list, built from `data/sources.yml` and deployed to GitHub Pages. It uses no frameworks or dependencies and is styled to match OpenGeo.
 - Repository scaffold: data file, schema, README generator, validation, CI and contribution guidelines.
 - Sample entries for checking the pipeline: Natural Earth, geoBoundaries and USGS Earthquake Feeds.
 - First seed batch: 26 sources drawn from those running in OpenGeo production, ranked by usefulness. Every link and license was re-checked on 2026-11-22.

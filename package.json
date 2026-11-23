@@ -12,6 +12,7 @@
     "validate": "node scripts/validate.mjs",
     "build": "node scripts/build.mjs",
     "check": "node scripts/build.mjs --check",
+    "site": "node scripts/site.mjs",
     "lint": "awesome-lint",
     "test": "node --test",
     "verify": "pnpm run test && pnpm run check && pnpm run lint"

@@ -20,6 +20,7 @@ Each entry ends with tags in this order:
 - [Base Maps and Reference](#base-maps-and-reference)
 - [Boundaries and Administrative Units](#boundaries-and-administrative-units)
 - [Population and Society](#population-and-society)
+- [Buildings and Infrastructure](#buildings-and-infrastructure)
 - [Imagery and Earth Observation](#imagery-and-earth-observation)
 - [Elevation and Bathymetry](#elevation-and-bathymetry)
 - [Land Cover and Biodiversity](#land-cover-and-biodiversity)
@@ -57,6 +58,15 @@ Country, subnational, statistical and maritime boundaries.
 Population grids, census geography and socioeconomic statistics with geographic keys.
 
 - [Global Human Settlement Layer (GHSL)](https://human-settlement.emergency.copernicus.eu/datasets.php) - Global grids of population, built-up surface, building height and settlement type from 1975 to 2030. (`Global` `Download` `GeoTIFF` `EU reuse with acknowledgment`)
+- [U.S. Census Data API](https://www.census.gov/data/developers.html) - American Community Survey, decennial census and economic statistics for U.S. geographies, from states down to block groups. (`USA` `API` `JSON` `Public domain`)
+- [WorldPop](https://hub.worldpop.org/) - Gridded population estimates at 100 m and 1 km for every country, with age and sex breakdowns, from 2000 onward. (`Global` `Download` `API` `GeoTIFF` `CC BY 4.0`)
+
+## Buildings and Infrastructure
+
+Building footprints, energy, utilities and other built assets.
+
+- [Google Open Buildings](https://sites.research.google/gr/open-buildings/) - Machine-learned building footprints with confidence scores for Africa, South and Southeast Asia, Latin America and the Caribbean. (`Africa` `Asia` `Americas` `Download` `Bulk cloud` `CSV` `CC BY 4.0 or ODbL (your choice)`)
+- [U.S. Energy Atlas](https://atlas.eia.gov/) - Mapped U.S. energy infrastructure and resources, including power plants, transmission lines, pipelines, refineries and oil and gas fields. (`USA` `ArcGIS REST` `Download` `GeoJSON` `CSV` `Shapefile` `KML` `Public domain`)
 
 ## Imagery and Earth Observation
 
@@ -93,6 +103,7 @@ Air pollution observations and other environmental monitoring.
 Observations, forecasts, warnings and climate reanalysis.
 
 - [Aviation Weather Center Data API](https://aviationweather.gov/data/api/) - Worldwide METAR and TAF reports plus SIGMETs, AIRMETs, pilot reports and other aviation advisories. (`Global` `⚡` `API` `JSON` `GeoJSON` `XML` `CSV` `Public domain`)
+- [ERA5](https://cds.climate.copernicus.eu/datasets/reanalysis-era5-single-levels) - Hourly global reanalysis of atmosphere, land and ocean climate variables at about 31 km resolution, from 1940 to near present. (`Global` `🔑` `API` `GRIB` `NetCDF` `CC BY 4.0`)
 - [MET Norway Weather API](https://api.met.no/) - Global point forecasts, Nordic nowcasts and official Norwegian weather warnings from the Norwegian Meteorological Institute. (`Global` `⚡` `API` `CAP` `GeoJSON` `JSON` `XML` `CC BY 4.0 / NLOD 2.0`)
 - [National Weather Service API](https://www.weather.gov/documentation/services-web-api) - U.S. point and gridded forecasts, station observations, and active watches and warnings with their polygons. (`USA` `⚡` `API` `CAP` `GeoJSON` `JSON` `XML` `Public domain`)
 
@@ -100,6 +111,7 @@ Observations, forecasts, warnings and climate reanalysis.
 
 Earthquakes, wildfires, tropical cyclones, floods and multi-hazard alerting.
 
+- [FEMA National Flood Hazard Layer](https://www.fema.gov/flood-maps/national-flood-hazard-layer) - Effective U.S. flood insurance rate map data, including flood zones, base flood elevations and floodways. (`USA` `ArcGIS REST` `Download` `GeoJSON` `JSON` `Shapefile` `Public domain`)
 - [Global Disaster Alert and Coordination System (GDACS)](https://www.gdacs.org/) - Automated alerts and impact estimates for earthquakes, tropical cyclones, floods, volcanoes, droughts and wildfires worldwide. (`Global` `⚡` `API` `CAP` `GeoJSON` `XML` `No reuse license stated` `⚠️`)
 - [NASA Earth Observatory Natural Event Tracker (EONET)](https://eonet.gsfc.nasa.gov/docs/v3) - Curated natural events such as wildfires, severe storms, volcanoes and sea ice, linked to their source imagery. (`Global` `API` `GeoJSON` `JSON` `Public domain`)
 - [NASA FIRMS Active Fire Data](https://firms.modaps.eosdis.nasa.gov/active_fire/) - Global satellite thermal hotspot detections from MODIS and VIIRS, published within hours of each overpass. (`Global` `⚡` `Download` `CSV` `Shapefile` `KML` `Public domain`)
@@ -130,6 +142,7 @@ Public transit, shared mobility, roads and traffic.
 Aircraft and vessel tracking, launches, satellites and ground stations.
 
 - [AISStream](https://aisstream.io/) - Free WebSocket stream of global AIS vessel positions and static ship data, filterable by bounding box. (`Global` `⚡` `🔑` `Stream` `JSON` `No reuse license stated` `⚠️`)
+- [CelesTrak](https://celestrak.org/NORAD/documentation/gp-data-formats.php) - Current orbital elements for active satellites and tracked debris, grouped by mission type, for orbit propagation and pass prediction. (`Global` `API` `Download` `JSON` `CSV` `XML` `Text` `No reuse license stated` `⚠️`)
 
 ## Related Lists
 

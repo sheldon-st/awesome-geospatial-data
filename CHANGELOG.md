@@ -25,3 +25,10 @@ Additions, removals and structural changes, grouped by batch. Dates are UTC.
   - Land cover and biodiversity: ESA WorldCover, GBIF.
   - Population: Global Human Settlement Layer (GHSL).
   - Catalogs: Humanitarian Data Exchange (HDX).
+- Third batch: 7 global and U.S. sources. Every link and license was re-checked on 2026-11-23.
+  - Buildings and infrastructure: Google Open Buildings, U.S. Energy Atlas.
+  - Population: WorldPop, U.S. Census Data API.
+  - Weather and climate: ERA5.
+  - Natural hazards: FEMA National Flood Hazard Layer.
+  - Space: CelesTrak.
+- `GRIB` format value, for GRIB edition 1 data such as ERA5.
